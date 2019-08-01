@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        body{
+            text-align: center;
+        }
+        ul>li{
+            list-style: none;
+        }
+/*header下的样式*/
+        a{
+            text-decoration: none;
+            color:#fff;
+        }
+/*父元素header的样式*/
+        header{
+            background-color: #14B9C8;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            height: 80px;
+            line-height: 80px;
+        }
+
+
+/*父元素header下的列表公用的样式*/
+        header>ul>li{
+            float: left;
+            list-style: none;
+        }
+
+/*父元素header的左侧文字样式*/
+        header>.lefttextandimg>span{
+            
+            font-size: 30px;
+            box-sizing: border-box;
+            color:#fff;
+            font-family:"YouYuan";
+            font-weight: 400;
+        }
+
+/*父元素header的左侧手机app下载图标*/
+        header>.lefttextandimg>img{
+            width:13.98px;
+            height: 26px;
+            margin-right: -10px;
+            margin-left: 10px;
+            margin-bottom: -10px;
+        }
+/*父元素header的中间分类列表的样式*/
+        header>ul>li{
+            width:89px;
+            font-size: 16px;
+        }
+        header>ul>li>a{
+            width: 100%;
+            height:100%;
+            padding: 30px 0;
+        }
+/*父元素header的右侧整体大样式*/
+        header>.rightinputandimg{
+            display: flex;
+        }
+/*父元素header的右侧的input框及图片样式*/
+        header .inputandimg{
+            width:160px;
+            height: 80px;
+            line-height: 80px;
+            position: relative;
+        }
+        #box{
+            font-size: 14px;
+            width:160px;
+            height: 32px;
+            background-color: #b4ebfa;
+            border-radius: 20px;
+            padding:12px 15px 12px 38px;
+            box-sizing: border-box;
+        }
+        header .inputandimg>img{
+            position: absolute;
+            width:19px;
+            height:20px;
+            top:34px;left: 15px;
+        }
+/*父元素header的最右侧通知和图像样式*/
+        header .rightul{
+            display: flex;
+        }
+        header .rightul>.inform img{
+            width:24px;
+            height: 24px;
+            margin:25px 20px 25px 30px;
+        }
+        header .rightul>.headimg{
+            width:50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-top: 15px;
+            background-color: #fff;
+        }
+        header .rightul>.headimg>img{
+            width:42px;
+            height: 42px;
+        }
+/*footer页脚的样式*/
+        footer{
+            background-color: #666;
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;
+            color:#999;
+            box-sizing: border-box;
+           
+            margin-top: 20px;
+        }
+        .footer ul>li{
+            float: left;
+        }
+        .footertop{
+            display: flex;
+        }
+        footer a{
+            color:#999;
+        }
+        .pagebottom{
+            width:1070px;
+            height:192px;
+            display: flex;
+            justify-content: center;
+        }
+        .footerleft{
+            font-size: 12px;
+            width:502px;
+            height: 192px;
+            margin-right: 100px;
+        }
+        .footerleft img{
+            width:120px;
+            height: 35px;
+        }
+
+        .footerleft p{
+            font-size: 24px;
+            margin-bottom: 15px;
+            margin-top: 10px;
+        }
+/*底部右侧上部 官方微信qq*/
+        .footerright{
+            width:322px;
+            height: 146px;
+            font-size: 12px;
+            margin-left: 40px;
+        }
+        .footerright>.us{
+            width:322px;
+            height: 20px;
+            margin-bottom: 10px;
+        }
+        .footerright .active{
+            width:322px;
+            height: 20px;
+            margin-bottom: 10px;  
+            margin-top: 70px;
+            clear: both;
+        }
+        .footerright ul{
+            margin-bottom: 20px;
+
+        }
+        .footerright ul>li{
+            float: left;
+            margin-right: 10px;
+        }
+        .footerright ul>li>img{
+            width:40px;
+            height: 40px;
+        }
+
+
+    .footerbottoma img{
+            width:20px;
+            height: 20px;
+           
+    }
+    .footerbottoma{
+        margin-left: -237px;
+        font-size: 12px;
+    }
+    /* section  主体部分样式 */
+    section,.main{
+        width:1040px;
+        height: 100%;
+        margin:0 auto;
+    }
+    .forandlist{
+        display: flex;
+    }
+    .main>.bigimg{
+        width:100%;
+        height: 100%;
+        position: relative;
+    }
+    .main>.bigimg>.paper{
+    width:1040px;
+    height: 414px;
+    }
+    .bigimg>a{
+        color:#fff;
+    }
+    .bigimg>.bjtj{
+        font-size: 18px;
+        position: absolute;
+        top: 30px;left: 30px;
+    }
+
+    .bigimg>.pingfen{
+        position: absolute;
+        bottom:20px;right: 110px;
+        font-size: 12px;
+    }
+    .bigimg>.star{
+        width:20px;
+        height: 21px;
+        position: absolute;
+        bottom:15px;right: 80px;
+    }
+    .bigimg>.fenshu{
+        position: absolute;
+        bottom: 15px;right: 40px;
+        font-size: 18px;
+    }
+    .forzhuanti,.potandrecommend{
+        margin-top: 20px;
+    }
+    .zhuantione,.zhuantitwo,.zhuantithree,.zhuantifour,.zhuantifive,.zhuantisix,.zhuantiseven,.zhuantieight,.zhuantinine,.zhuantiten{
+        background-color: #666;
+        height: 400px;
+        width:685px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    .zhuantione  .summon{
+        width:685px;
+        height:272px;
+    }
+    .zhuantitwo .summon{
+        width:685px;
+        height:272px;
+    }
+    .zhuantithree .summon{
+        width:685px;
+        height:272px;
+    }
+    .zhuantifour .summon{
+        width:685px;
+        height:272px;
+    }
+    .zhuantifive .summon{
+        width:685px;
+        height:272px;
+    }
+    .zhuantisix .summon{
+        width:685px;
+        height:272px;
+    }
+    .zhuantiseven .summon{
+        width:685px;
+        height:272px;
+    }
+    .zhuantieight .summon{
+        width:685px;
+        height:272px;
+    }
+    .zhuantinine .summon{
+        width:685px;
+        height:272px;
+    }
+    .zhuantiten .summon{
+        width:685px;
+        height:272px;
+    }
+    .zhuantione .guanggao{
+        margin-left: -600px;
+        font-size: 14px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .zhuantitwo .guanggao{
+        margin-left: -600px;
+        font-size: 14px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+
+    }
+    .zhuantithree .guanggao{
+        margin-left: -600px;
+        font-size: 14px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .zhuantifour .guanggao{
+        margin-left: -600px;
+        font-size: 14px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .zhuantifive .guanggao{
+        margin-left: -600px;
+        font-size: 14px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .zhuantisix .guanggao{
+        margin-left: -600px;
+        font-size: 14px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .zhuantiseven .guanggao{
+        margin-left: -600px;
+        font-size: 14px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .zhuantieight .guanggao{
+        margin-left: -600px;
+        font-size: 14px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .zhuantinine .guanggao{
+        margin-left: -600px;
+        font-size: 14px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .zhuantiten .guanggao{
+        margin-left: -600px;
+        font-size: 14px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    .zhaohuanimg{
+        display: flex;
+        justify-content: space-around; 
+    }
+
+    .zhaohuanimg>img{
+        width:50px;
+        height: 50px;
+        margin-left: -15px;
+    }
+    
+    .zhaohuan>p:first-child{
+        margin-left: -300px;
+        font-weight: 1000;
+    }
+    .zhaohuan>p:nth-child(2){
+        margin-left: -77px;
+    }
+    .pingjia .smallstar{
+        width: 20px;
+        height: 20px;
+        margin-top: 2px;
+    }
+    .pingjia>p{
+        margin-top: -10px;
+    }
+    .pingjia>span{
+        margin-top: -20px;
+    }
+
+/*排行榜及推荐列表样式  */
+    .potandrecommend{
+        width:325px;
+        background-color: #999;
+        margin-left: 30px;
+    }
+/*二维码块样式  */
+    .erweima{
+        width:100%;
+        height: 120px;
+        background-color: #14B9C8;
+        margin-bottom: 20px;
+    }
+    .erweima>img{
+        display: inline-block;
+        width:100px;
+        height: 100px;
+        margin-left: -215px;
+        margin-top: 10px;
+    }
+    .erweima div{
+        width: 200px;
+        height: 30px;
+        color: #fff;
+        margin-top: -100px;
+        margin-left: 100px;
+        font-size: 18px;
+        
+    }
+    .erweima p{
+        margin-left: 17px;
+        margin-top: 5px;
+    }
+    .erweima ul{
+        margin-left: 110px;
+        margin-top: 15px;
+    }
+    .erweima ul>li{
+        float: left;
+        margin-left: 10px;
+    }
+    .erweima ul>li>img{
+        width:30px;
+        height: 30px;
+    }
+    </style>
+</head>
+<body>
+<div id="container">
+    <!-- 页头部分 -->
+<header>
+        <div class="lefttextandimg">
+                <!-- 左侧文字 -->
+                <span>TapTap</span>
+                <img src="img/phone.png" alt="手机下载">
+                 <!-- 中间ul 列表 -->
+        </div>
+       <ul>
+         <li><a href="#">首页</a></li>
+         <li><a href="#">排行榜</a></li>
+         <li><a href="#">安利墙</a></li>
+         <li><a href="#">发现</a></li>
+         <li><a href="#">论坛</a></li>
+         <li><a href="#">视频</a></li>
+       </ul>
+       <div class="rightinputandimg">    
+                <div class="inputandimg">
+                    <img src="img/search.png" alt="搜素">
+                <!-- 搜素框 -->
+                    <input id="box" type="text" placeholder="搜索">
+                </div>
+                <ul class="rightul">
+                <!-- 通知图标   23.98  23.98 -->
+                    <li class="inform">
+                    <img src="img/inform.png" alt="通知">  
+                    </li>    
+                <!-- 头像  我的 -->
+                   
+                    <li class="headimg">
+                            <img src="img/my.png" alt="头像"> 
+                    </li>
+                </ul> 
+        </div>
+</header>
+
+    <!-- 主体部分 -->
+<section>
+<div class="main">
+         <!-- 上面大图 -->
+        <div class="bigimg">
+            <img  class="paper" src="img/pagegir.jpg" alt="纸片少女">
+            <a class="bjtj" href="#">编辑推荐</a>
+            <a class="pingfen" href="#">368人评分</a>
+            <img class="star" src="img/star.png" alt="星星">
+            <a class="fenshu" href="#">8.2</a>
+        </div>
+        <div class="forandlist">
+                <!-- 下面左右分组  左侧可循环部分-->
+                 <div class="forzhuanti">
+            <!-- 左侧可循环的主题 -->
+            <div>
+                <!--专题一 召唤与合成 -->
+                 <div class="zhuantione">
+                            <p class="guanggao">来自广告</p>
+                            <img class="summon" src="img/summon.jpg" alt="召唤与合成">
+                            <div class="zhaohuanimg">
+                                <img class="zhaohuanshi" src="img/zhaohuanshi.png" alt="召唤师">
+                                <div class="zhaohuan">
+                                        <p >召唤与合成</p>
+                                        <p>创新召合战棋登场，随时可停的PVE自走棋</p>
+                                </div>
+                                <div class="pingjia">
+                                    <p>29797人评分</p>
+                                    <img class="smallstar" src="img/star1.png" alt="小星星">
+                                    <span>9.6</span>
+                                </div>
+                                
+                            </div>
+                 </div>
+                 <!-- 专题二 -->
+                 <div class="zhuantitwo">
+                    <p class="guanggao">来自广告</p>
+                    <img class="summon" src="img/summon.jpg" alt="召唤与合成">
+                    <div class="zhaohuanimg">
+                        <img class="zhaohuanshi" src="img/zhaohuanshi.png" alt="召唤师">
+                        <div class="zhaohuan">
+                                <p >召唤与合成</p>
+                                <p>创新召合战棋登场，随时可停的PVE自走棋</p>
+                        </div>
+                        <div class="pingjia">
+                            <p>29797人评分</p>
+                            <img class="smallstar" src="img/star1.png" alt="小星星">
+                            <span>9.6</span>
+                        </div>
+                        
+                    </div>
+                 </div>
+                 <!-- 专题三 -->
+                 <div class="zhuantithree">
+                    <p class="guanggao">来自广告</p>
+                    <img class="summon" src="img/summon.jpg" alt="召唤与合成">
+                    <div class="zhaohuanimg">
+                        <img class="zhaohuanshi" src="img/zhaohuanshi.png" alt="召唤师">
+                        <div class="zhaohuan">
+                                <p >召唤与合成</p>
+                                <p>创新召合战棋登场，随时可停的PVE自走棋</p>
+                        </div>
+                        <div class="pingjia">
+                            <p>29797人评分</p>
+                            <img class="smallstar" src="img/star1.png" alt="小星星">
+                            <span>9.6</span>
+                        </div>
+                        
+                    </div>
+                 </div>
+                 <!-- 专题四 -->
+                 <div class="zhuantifour">
+                    <p class="guanggao">来自广告</p>
+                    <img class="summon" src="img/summon.jpg" alt="召唤与合成">
+                    <div class="zhaohuanimg">
+                        <img class="zhaohuanshi" src="img/zhaohuanshi.png" alt="召唤师">
+                        <div class="zhaohuan">
+                                <p >召唤与合成</p>
+                                <p>创新召合战棋登场，随时可停的PVE自走棋</p>
+                        </div>
+                        <div class="pingjia">
+                            <p>29797人评分</p>
+                            <img class="smallstar" src="img/star1.png" alt="小星星">
+                            <span>9.6</span>
+                        </div>
+                        
+                    </div>
+                 </div>
+                 <!-- 专题五 -->
+                 <div class="zhuantifive">
+                    <p class="guanggao">来自广告</p>
+                    <img class="summon" src="img/summon.jpg" alt="召唤与合成">
+                    <div class="zhaohuanimg">
+                        <img class="zhaohuanshi" src="img/zhaohuanshi.png" alt="召唤师">
+                        <div class="zhaohuan">
+                                <p >召唤与合成</p>
+                                <p>创新召合战棋登场，随时可停的PVE自走棋</p>
+                        </div>
+                        <div class="pingjia">
+                            <p>29797人评分</p>
+                            <img class="smallstar" src="img/star1.png" alt="小星星">
+                            <span>9.6</span>
+                        </div>
+                        
+                    </div>
+                 </div>
+                 <!-- 专题六 -->
+                 <div class="zhuantisix">
+                    <p class="guanggao">来自广告</p>
+                    <img class="summon" src="img/summon.jpg" alt="召唤与合成">
+                    <div class="zhaohuanimg">
+                        <img class="zhaohuanshi" src="img/zhaohuanshi.png" alt="召唤师">
+                        <div class="zhaohuan">
+                                <p >召唤与合成</p>
+                                <p>创新召合战棋登场，随时可停的PVE自走棋</p>
+                        </div>
+                        <div class="pingjia">
+                            <p>29797人评分</p>
+                            <img class="smallstar" src="img/star1.png" alt="小星星">
+                            <span>9.6</span>
+                        </div>
+                        
+                    </div>
+                 </div>
+                 <!-- 专题七 -->
+                 <div class="zhuantiseven">
+                    <p class="guanggao">来自广告</p>
+                    <img class="summon" src="img/summon.jpg" alt="召唤与合成">
+                    <div class="zhaohuanimg">
+                        <img class="zhaohuanshi" src="img/zhaohuanshi.png" alt="召唤师">
+                        <div class="zhaohuan">
+                                <p >召唤与合成</p>
+                                <p>创新召合战棋登场，随时可停的PVE自走棋</p>
+                        </div>
+                        <div class="pingjia">
+                            <p>29797人评分</p>
+                            <img class="smallstar" src="img/star1.png" alt="小星星">
+                            <span>9.6</span>
+                        </div>
+                        
+                    </div>
+                 </div>
+                 <!-- 专题八 -->
+                 <div class="zhuantieight">
+                    <p class="guanggao">来自广告</p>
+                    <img class="summon" src="img/summon.jpg" alt="召唤与合成">
+                    <div class="zhaohuanimg">
+                        <img class="zhaohuanshi" src="img/zhaohuanshi.png" alt="召唤师">
+                        <div class="zhaohuan">
+                                <p >召唤与合成</p>
+                                <p>创新召合战棋登场，随时可停的PVE自走棋</p>
+                        </div>
+                        <div class="pingjia">
+                            <p>29797人评分</p>
+                            <img class="smallstar" src="img/star1.png" alt="小星星">
+                            <span>9.6</span>
+                        </div>
+                        
+                    </div>
+                 </div>
+                 <!-- 专题久 -->
+                 <div class="zhuantinine">
+                    <p class="guanggao">来自广告</p>
+                    <img class="summon" src="img/summon.jpg" alt="召唤与合成">
+                    <div class="zhaohuanimg">
+                        <img class="zhaohuanshi" src="img/zhaohuanshi.png" alt="召唤师">
+                        <div class="zhaohuan">
+                                <p >召唤与合成</p>
+                                <p>创新召合战棋登场，随时可停的PVE自走棋</p>
+                        </div>
+                        <div class="pingjia">
+                            <p>29797人评分</p>
+                            <img class="smallstar" src="img/star1.png" alt="小星星">
+                            <span>9.6</span>
+                        </div>
+                        
+                    </div>
+                 </div>
+                 <!-- 专题十 -->
+                 <div class="zhuantiten">
+                    <p class="guanggao">来自广告</p>
+                    <img class="summon" src="img/summon.jpg" alt="召唤与合成">
+                    <div class="zhaohuanimg">
+                        <img class="zhaohuanshi" src="img/zhaohuanshi.png" alt="召唤师">
+                        <div class="zhaohuan">
+                                <p >召唤与合成</p>
+                                <p>创新召合战棋登场，随时可停的PVE自走棋</p>
+                        </div>
+                        <div class="pingjia">
+                            <p>29797人评分</p>
+                            <img class="smallstar" src="img/star1.png" alt="小星星">
+                            <span>9.6</span>
+                        </div>
+                        
+                    </div>
+                 </div>
+            </div>
+            <!-- 右侧排行榜及最新评价 -->
+            <div></div>
+                </div>
+
+                <!-- 下面左右分组   右侧排行榜和推荐部分   -->
+                <div class="potandrecommend">
+                    <!-- 上面二维码 -->
+                    <div class="erweima">
+                        <img src="img/erweima.jpg" alt="二维码">
+                        <div>
+                        <span>TapTap</span>
+                        <span>发现好游戏</span>
+                        </div>     
+                        
+                        <p>欢迎关注我们</p>
+                        <ul>
+                            <li><img src="img/weixin.png" alt="weixin"></li>
+                            <li><img src="img/qq.png" alt="qq"></li>
+                            <li><img src="img/zhihu.png" alt="zhihu"></li>
+                            <li><img src="img/weibo.png" alt="weibo"></li>
+                            <li><img src="img/youxiang.png" alt="youxiang"></li>
+                        </ul>
+                    </div>
+                    <!-- 排行榜 -->
+                    <div class="ranking">
+                            <!-- 排行榜与更多 文字 -->
+                            <div>
+                                <h3>排行榜</h3>
+                                <a href="#">更多</a>
+                            </div>
+                            <!-- 排行列表 -->
+                            <ul>
+                                <!-- 第一名 -->
+                                <li>
+                                    <span>1</span>
+                                    <img src="" alt="骷髅头">
+                                    <a href="">王牌战争：文明重启</a>
+                                    <span>4.2</span>
+                                    <img src="" alt="小灰星">
+                                    <span>生存 末日 联机</span>
+                                </li>
+                                <!-- 第二名 -->
+                                <li></li>
+                                <!-- 第三名 -->
+                                <li></li>
+                                <!-- 第四名 -->
+                                <li></li>
+                                <!-- 第五名 -->
+                                <li></li>
+                                <!-- 第六名 -->
+                                <li></li>
+                                <!-- 第七名 -->
+                                <li></li>
+                                <!-- 第八名 -->
+                                <li></li>
+                                <!-- 第九名 -->
+                                <li></li>
+                                <!-- 第十名 -->
+                                <li></li>
+                            </ul>
+                    </div>
+                </div>
+        </div>
+</div>
+</section>
+
+
+
+
+
+
+<!-- 页脚部分 -->
+<footer class="footer">
+<div class="footertop">
+    <!-- 底部上侧的a标签及图片 -->
+    <div class="pagebottom">
+                <!--上侧左边的文字+图片  -->
+             <div class="footerleft">
+                    <!-- 图片+button+a标签 -->
+                    <div>
+                        <img src="img/taptap.png" alt="TapTap">
+                        <a>中文（简体）</a>
+                        <a href="#">开发者中心</a>
+                        <a href="#">广告投放</a>
+                        <a href="#">关心我们</a>
+                        <a href="#">加入我们</a>
+                        <a href="#">用户认证</a>
+                    </div>
+                    <p>
+                            Discover Superb Games.
+                    </p>
+                    <span>
+                            <span>
+                                Copyright © 2019
+                                <a href="#">TapTap</a>
+                                All rights Reserved. 
+                            </span><br> 
+                            <span>
+                                    适龄提示: 本公司产品适合 10 周岁以上玩家使用
+                                    <a href="#">未成年人家长监护</a>
+                                    <a href="#">隐私权政策</a>
+                                    <a href="#">侵权投诉</a>
+                            </span>
+                            <a href="#">沪ICP备16012525号-1 </a>
+                            <a href="#">沪网文(2016)2204-116号</a><br>
+                            <span>经营许可证编号: 沪B2-20170322易玩（上海）网络科技有限公司 </span><br>
+                            <span>公司地址: 上海市静安区万荣路 700 号 A3 202</span>
+                    </span>
+            </div>
+            <!-- 上侧右边的文字+图片 -->
+            <div class="footerright">
+                    <p class="us">Contact Us</p>
+                    <ul>
+                        <li><img src="img/Facebook.png" alt="Facebook"></li>
+                        <li><img src="img/weixin.png" alt="weixin"></li>
+                        <li><img src="img/qq.png" alt="qq"></li>
+                        <li><img src="img/zhihu.png" alt="zhihu"></li>
+                        <li><img src="img/weibo.png" alt="weibo"></li>
+                        <li><img src="img/youxiang.png" alt="yongxiang"></li>
+                    </ul>
+                    <p  class="active">官方活动</p>
+                    <a href="#">TapTap 三周年</a>
+                    <a href="#"> 篝火计划</a>
+                    <a href="#"> 涂鸦大赛</a>
+                    <a href="#">2018年度游戏大赏</a>
+            </div>
+    </div>
+</div>
+    <!-- 底部下侧的网络号 列表 -->
+    <div class="footerbottoma">
+        
+            <a href="">
+                <img src="img/gongan.png" alt="">
+                沪公网安备 31010402003255号
+            </a>
+      
+            <a href="">
+                <img src="img/hulianwang.png" alt="">
+                互联网文化经营单位
+            </a>
+       
+            <a href="">
+                <img src="img/weifa.png" alt="">
+                违法信息举报电话：021-60727072转3003
+            </a>
+     
+    </div>
+
+</footer>
+
+</div>
+</body>
+</html>

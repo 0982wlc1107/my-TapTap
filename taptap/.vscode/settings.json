@@ -1,0 +1,5 @@
+{
+    "liveServer.settings.port": 5501,
+    "json.trace.server": "off",
+    "files.associations": {"*.vue":"html"}
+}
