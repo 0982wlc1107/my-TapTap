@@ -9,6 +9,7 @@
         *{margin: 0;padding: 0;}
         body{
             text-align: center;
+            background-color: #f2f2f2;
         }
         ul>li{
             list-style: none;
@@ -141,6 +142,7 @@
             width:502px;
             height: 192px;
             margin-right: 100px;
+            text-align: left;
         }
         .footerleft img{
             width:120px;
@@ -163,6 +165,7 @@
             width:322px;
             height: 20px;
             margin-bottom: 10px;
+            text-align: left;
         }
         .footerright .active{
             width:322px;
@@ -170,6 +173,7 @@
             margin-bottom: 10px;  
             margin-top: 70px;
             clear: both;
+            text-align: left;
         }
         .footerright ul{
             margin-bottom: 20px;
@@ -183,7 +187,9 @@
             width:40px;
             height: 40px;
         }
-
+        .footerright>.bottomalla{
+            text-align: left;
+        }
 
     .footerbottoma img{
             width:20px;
@@ -191,8 +197,9 @@
            
     }
     .footerbottoma{
-        margin-left: -237px;
+        margin-left: -380px;
         font-size: 12px;
+
     }
     /* section  主体部分样式 */
     section,.main{
@@ -241,7 +248,7 @@
         margin-top: 20px;
     }
     .zhuantione,.zhuantitwo,.zhuantithree,.zhuantifour,.zhuantifive,.zhuantisix,.zhuantiseven,.zhuantieight,.zhuantinine,.zhuantiten{
-        background-color: #666;
+        background-color: #fff;
         height: 400px;
         width:685px;
         display: flex;
@@ -383,14 +390,14 @@
 /*排行榜及推荐列表样式  */
     .potandrecommend{
         width:325px;
-        background-color: #999;
+        background-color: #f2f2f2;
         margin-left: 30px;
     }
 /*二维码块样式  */
     .erweima{
         width:100%;
         height: 120px;
-        background-color: #14B9C8;
+        background-color: #fff;
         margin-bottom: 20px;
     }
     .erweima>img{
@@ -446,7 +453,7 @@
         height: 90px;
         display: flex;
         justify-content: space-around;
-        background-color: red;
+        background-color: #fff;
         margin-bottom: 10px;
     }
 /*排行榜 数字排序*/
@@ -568,6 +575,9 @@
     }
     .ranking>ul>.one>.onetext>p{
         margin-left: -100px;
+    }
+    .ranking>ul>.one>.onetext>p>a{
+        color:black;
     }
     .ranking>ul>.one>.onetext>div{
         margin-left: -90px;
@@ -755,26 +765,157 @@
         font-size: 24px;
     }
     .assess .assesslist{
-        background-color: #14B9C8;
+        background-color: #fff;
+        margin-bottom: 10px;
     }
-    .assess .assesslist>.list1>img{
+
+    .assess .assesslist>.list1{
+        display: flex;
+        height: 70px;
+        width:325px;
+    }
+     .assess .assesslist>.list1>img{
         width: 50px;
         height: 50px;
-        margin-left: -200px;
-    }
+        margin-left: 20px;
+        margin-top: 10px;
+    } 
     /* 原神标签样式 */
-    .assess .assesslist>.list1>a{
-        margin-top: -100px;
+    .assess .assesslist>.list1>.ulanda{
+        padding-top: 15px;
+    }
+    .assess .assesslist>.list1>.ulanda>a{
+        margin:10px 0px 10px -50px;
+        color: black;
     }
 
     /*小蓝星列表样式*/
-    .assess .assesslist>.list1>ul>li{
-        float: left;
-        margin-right: 10px;
+    .assess .assesslist>.list1>.ulanda>ul{
+        margin-left: 10px;
     }
-    .assess .assesslist>.list1>ul>li>img{
+    .assess .assesslist>.list1>.ulanda>ul>li{
+        float: left;
+        margin-right: 5px;
+    }
+    .assess .assesslist>.list1>.ulanda>ul>li>img{
         width:14px;
         height: 14px;
+    }
+    .assess .assesslist>.referenceandp{
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        padding:10px 0px 0px 0px;
+    }
+    .assess .assesslist>.referenceandp>img:first-child{
+        width: 20px;
+        height: 20px;
+    }
+    .assess .assesslist>.referenceandp>img:last-child{
+        width:20px;
+        height: 20px;
+        transform: rotate(180deg);
+        margin-top: 20px;
+        
+    }
+    .assess .assesslist>.referenceandp>p{
+        width:260px;
+        display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;
+        overflow: hidden;
+        margin-left:0px;
+    }
+    .assess .assesslist>p{
+        text-align: right;  
+        margin-left: 125px;
+        width: 200px;
+        overflow:hidden;
+        text-overflow:ellipsis; 
+        white-space: nowrap;/*加宽度width属来兼容部分浏览*/
+        color: #14B9C8;
+    }
+
+/*热门游戏标签*/
+    .HotGame>h3{
+        height: 39px;
+        margin-bottom: 10px;
+        text-align: left;
+        font-size: 24px;
+    }
+    .Hotlist{
+        width: 325px;
+        height: 150px;
+        padding-top: 10px;
+        margin-bottom: 10px;
+        background: #fff;
+    }
+    .Hotlist>ul{
+        margin-left:10px;
+        width:295px;
+        height: 140px;
+        padding-left: 15px;
+    }
+    .Hotlist>ul>li{
+        float: left;
+        height: 30px;
+        border: 1px solid #14B9C8;
+        border-radius: 5px;
+        padding: 4px 10px;
+        color: #14B9C8;
+        margin: 3px 5px; 
+        line-height: 30px;  
+    }
+    .Hotlist>ul>li>a{
+        color: #14b9c8;
+        font-size: 14px;
+    }
+    .expand>h3{
+        font-size: 24px;
+        text-align: left;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+    }
+    .expand>div{
+        width: 325px;
+        height: 160px;
+        position: relative;
+    }
+    .expand>div>img:first-child{
+        width:325px;
+        height: 160px;
+    }
+    .expand>div>div{
+        width: 120px;
+        position: absolute;
+        bottom:30px;
+        left:20px;
+        background-color: #fff;
+        padding: 5px 5px;
+        
+
+    }
+    .expand>div>div>a{
+        color: #14B9C8;
+    }
+    .expand>div>div>a>img{
+        width: 14px;
+        height: 16px;
+    }
+     .expand>div>img:last-child{
+        width:150px;
+        height: 11px;
+        position: absolute;
+        bottom:10px;
+        left:20px;
+    } 
+    /* 更多按钮样式 */
+    .btn{
+        width: 89px;
+        height: 42px;
+        background: #14B9C8;
+        border: 1px solid #14B9C8;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 18px;
     }
     </style>
 </head>
@@ -1013,12 +1154,13 @@
                                         </div>
                                     </div>
                         </div>
+                        <button class="btn">更多</button>
 
                 </div>
 
                 <!--    右侧排行榜和推荐部分   -->
                 <div class="potandrecommend">
-                    <!-- 上面二维码 -->
+                <!-- 上面二维码 -->
                     <div class="erweima">
                         <img src="img/erweima.jpg" alt="二维码">
                         <div>
@@ -1181,16 +1323,141 @@
                     </div>
                     <!-- 评价部分 -->
                     <div class="assess">
-                            <!--最新评价与更多-->
+                         <!--最新评价与更多-->
                             <div class="assessandmore">
                                 <h3>最新评价</h3>
                                 <a href="#">更多</a>
                             </div>
-                                <!-- 评价列表 -->
-                                <div class="assesslist">
+                          <!-- 评价列表 -->
+                                    <!-- 评价一 -->
+                                    <div class="assesslist">
                                         <!-- 列表一上部图片和字 -->
                                         <div class="list1">
-                                            <img src="img/yuanshen.png" alt="游戏图片">                                  
+                                            <img src="img/yuanshen.png" alt="游戏图片"> 
+                                            <div class="ulanda">                             
+                                                    <a href="#">原神</a>
+                                                    <ul>
+                                                                <li>
+                                                                    <img src="img/smallbluestar.png" alt="小蓝星">
+                                                                </li>
+                                                                <li>
+                                                                    <img src="img/smallbluestar.png" alt="小蓝星">
+                                                                </li>
+                                                                <li>
+                                                                    <img src="img/smallbluestar.png" alt="小蓝星">
+                                                                </li>
+                                                                <li>
+                                                                    <img src="img/smallbluestar.png" alt="小蓝星">
+                                                                </li>
+                                                                <li>
+                                                                    <img src="img/smallbluestar.png" alt="小蓝星">
+                                                                </li>                                           
+                                                    </ul>
+                                            </div>    
+                                        </div>
+                                        <hr>
+                                        <!-- 下部评价文字 -->
+                                        <div class="referenceandp">
+                                            <img src="img/reference.png" alt="双引号">
+                                           <p href="#">
+                                                怎么说吧 由模仿抄袭到创新这是个积累的过程 我不觉得mhy哪里做的很过分 毕竟前辈在那里压着 这么说吧 想要创新 你的手里有东西 技术到了不知道怎么做的时候只有去模仿 借鉴别人的成品 这是成长的必然经历 所以 mhy没什么好喷的 作为一个崩三弃坑玩家 我还是选择为mhy说话 毕竟 tx wy 这种圈钱大厂有钱不做实事才是万恶之源
+                                           </p>
+                                            <img src="img/reference.png" alt="双引号">
+                                        </div>
+                                        <!-- 底部评价人和游戏时长 -->
+                                        <p>
+                                            --000000000000000000000000000000000000000000000000000000000000000000000000dsakfdasjfkadsofiuaoisj uo
+                                          
+                                        </p>
+                                    </div>
+                                    <!-- 评价二 -->
+                                    <div class="assesslist">
+                                        <!-- 列表一上部图片和字 -->
+                                        <div class="list1">
+                                            <img src="img/yuanshen.png" alt="游戏图片"> 
+                                            <div class="ulanda">                             
+                                                    <a href="#">原神</a>
+                                                    <ul>
+                                                                <li>
+                                                                    <img src="img/smallbluestar.png" alt="小蓝星">
+                                                                </li>
+                                                                <li>
+                                                                    <img src="img/smallbluestar.png" alt="小蓝星">
+                                                                </li>
+                                                                <li>
+                                                                    <img src="img/smallbluestar.png" alt="小蓝星">
+                                                                </li>
+                                                                <li>
+                                                                    <img src="img/smallbluestar.png" alt="小蓝星">
+                                                                </li>
+                                                                <li>
+                                                                    <img src="img/smallbluestar.png" alt="小蓝星">
+                                                                </li>                                           
+                                                    </ul>
+                                            </div>    
+                                        </div>
+                                        <hr>
+                                        <!-- 下部评价文字 -->
+                                        <div class="referenceandp">
+                                            <img src="img/reference.png" alt="双引号">
+                                        <p href="#">
+                                                怎么说吧 由模仿抄袭到创新这是个积累的过程 我不觉得mhy哪里做的很过分 毕竟前辈在那里压着 这么说吧 想要创新 你的手里有东西 技术到了不知道怎么做的时候只有去模仿 借鉴别人的成品 这是成长的必然经历 所以 mhy没什么好喷的 作为一个崩三弃坑玩家 我还是选择为mhy说话 毕竟 tx wy 这种圈钱大厂有钱不做实事才是万恶之源
+                                        </p>
+                                            <img src="img/reference.png" alt="双引号">
+                                        </div>
+                                        <!-- 底部评价人和游戏时长 -->
+                                        <p>
+                                            --000000000000000000000000000000000000000000000000000000000000000000000000dsakfdasjfkadsofiuaoisj uo
+                                        
+                                        </p>
+                                    </div>
+                                     <!-- 评价三 -->
+                                    <div class="assesslist">
+                                    <!-- 列表一上部图片和字 -->
+                                    <div class="list1">
+                                        <img src="img/yuanshen.png" alt="游戏图片"> 
+                                        <div class="ulanda">                             
+                                                <a href="#">原神</a>
+                                                <ul>
+                                                            <li>
+                                                                <img src="img/smallbluestar.png" alt="小蓝星">
+                                                            </li>
+                                                            <li>
+                                                                <img src="img/smallbluestar.png" alt="小蓝星">
+                                                            </li>
+                                                            <li>
+                                                                <img src="img/smallbluestar.png" alt="小蓝星">
+                                                            </li>
+                                                            <li>
+                                                                <img src="img/smallbluestar.png" alt="小蓝星">
+                                                            </li>
+                                                            <li>
+                                                                <img src="img/smallbluestar.png" alt="小蓝星">
+                                                            </li>                                           
+                                                </ul>
+                                        </div>    
+                                    </div>
+                                    <hr>
+                                    <!-- 下部评价文字 -->
+                                    <div class="referenceandp">
+                                        <img src="img/reference.png" alt="双引号">
+                                    <p href="#">
+                                            怎么说吧 由模仿抄袭到创新这是个积累的过程 我不觉得mhy哪里做的很过分 毕竟前辈在那里压着 这么说吧 想要创新 你的手里有东西 技术到了不知道怎么做的时候只有去模仿 借鉴别人的成品 这是成长的必然经历 所以 mhy没什么好喷的 作为一个崩三弃坑玩家 我还是选择为mhy说话 毕竟 tx wy 这种圈钱大厂有钱不做实事才是万恶之源
+                                    </p>
+                                        <img src="img/reference.png" alt="双引号">
+                                    </div>
+                                    <!-- 底部评价人和游戏时长 -->
+                                    <p>
+                                        --000000000000000000000000000000000000000000000000000000000000000000000000dsakfdasjfkadsofiuaoisj uo
+                                    
+                                    </p>
+                                    </div>
+                                    <!-- 评价四 -->
+                                    <div class="assesslist">
+                                <!-- 列表一上部图片和字 -->
+                                <div class="list1">
+                                    <img src="img/yuanshen.png" alt="游戏图片"> 
+                                    <div class="ulanda">                             
                                             <a href="#">原神</a>
                                             <ul>
                                                         <li>
@@ -1209,31 +1476,107 @@
                                                             <img src="img/smallbluestar.png" alt="小蓝星">
                                                         </li>                                           
                                             </ul>
-                                            
+                                    </div>    
+                                </div>
+                                <hr>
+                                <!-- 下部评价文字 -->
+                                <div class="referenceandp">
+                                    <img src="img/reference.png" alt="双引号">
+                                <p href="#">
+                                        怎么说吧 由模仿抄袭到创新这是个积累的过程 我不觉得mhy哪里做的很过分 毕竟前辈在那里压着 这么说吧 想要创新 你的手里有东西 技术到了不知道怎么做的时候只有去模仿 借鉴别人的成品 这是成长的必然经历 所以 mhy没什么好喷的 作为一个崩三弃坑玩家 我还是选择为mhy说话 毕竟 tx wy 这种圈钱大厂有钱不做实事才是万恶之源
+                                </p>
+                                    <img src="img/reference.png" alt="双引号">
+                                </div>
+                                <!-- 底部评价人和游戏时长 -->
+                                <p>
+                                    --000000000000000000000000000000000000000000000000000000000000000000000000dsakfdasjfkadsofiuaoisj uo
+                                
+                                </p>
+                                    </div>
+                                    <!-- 评价五 -->
+                                    <div class="assesslist">
+                                        <!-- 列表一上部图片和字 -->
+                                        <div class="list1">
+                                            <img src="img/yuanshen.png" alt="游戏图片"> 
+                                            <div class="ulanda">                             
+                                                    <a href="#">原神</a>
+                                                    <ul>
+                                                                <li>
+                                                                    <img src="img/smallbluestar.png" alt="小蓝星">
+                                                                </li>
+                                                                <li>
+                                                                    <img src="img/smallbluestar.png" alt="小蓝星">
+                                                                </li>
+                                                                <li>
+                                                                    <img src="img/smallbluestar.png" alt="小蓝星">
+                                                                </li>
+                                                                <li>
+                                                                    <img src="img/smallbluestar.png" alt="小蓝星">
+                                                                </li>
+                                                                <li>
+                                                                    <img src="img/smallbluestar.png" alt="小蓝星">
+                                                                </li>                                           
+                                                    </ul>
+                                            </div>    
                                         </div>
+                                        <hr>
                                         <!-- 下部评价文字 -->
-                                        <div>
+                                        <div class="referenceandp">
                                             <img src="img/reference.png" alt="双引号">
-                                           <a href="#">
+                                        <p href="#">
                                                 怎么说吧 由模仿抄袭到创新这是个积累的过程 我不觉得mhy哪里做的很过分 毕竟前辈在那里压着 这么说吧 想要创新 你的手里有东西 技术到了不知道怎么做的时候只有去模仿 借鉴别人的成品 这是成长的必然经历 所以 mhy没什么好喷的 作为一个崩三弃坑玩家 我还是选择为mhy说话 毕竟 tx wy 这种圈钱大厂有钱不做实事才是万恶之源
-                                           </a>
+                                        </p>
                                             <img src="img/reference.png" alt="双引号">
                                         </div>
                                         <!-- 底部评价人和游戏时长 -->
                                         <p>
-                                            <a href=""></a>
-                                            <span></span>
+                                            --000000000000000000000000000000000000000000000000000000000000000000000000dsakfdasjfkadsofiuaoisj uo
+                                        
                                         </p>
+                                    </div>
+                    </div> 
+                    <!--热门游戏标签 -->
+                    <div class="HotGame">
+                        <!-- 标签 -->
+                            <h3>热门游戏标签</h3>
+                        <!-- 热门标签列表 -->
+                            <div class="Hotlist">
+                                <ul>
+                                    <li><a href="#">单机</a></li>
+                                    <li><a href="#">模拟</a></li>
+                                    <li><a href="#">角色扮演</a></li>
+                                    <li><a href="#">动作</a></li>
+                                    <li><a href="#">MOBA</a></li>
+                                    <li><a href="#">多人</a></li>
+                                    <li><a href="#">生存</a></li>
+                                    <li><a href="#">射击</a></li>
+                                    <li><a href="#">益智</a></li>
+                                    <li><a href="#">二次元</a></li>
+                                    <li><a href="#">卡牌</a></li>
+                                    <li><a href="#">策略</a></li>
+                                </ul>
+                            </div>
+                    </div>
+                    <!-- 推广部分 -->
+                    <div class="expand">
+                            <h3>推广</h3>
+                            <div>
+                                <img src="img/expand.png" alt="推广">
+                                <div>
+                                        <a href="#">
+                                            客户端下载
+                                            <img src="img/download.png" alt="下载">
+                                        </a>
                                 </div>
-
-                    </div>  <!--评价部分结尾-->
-                </div>
+                                <img src="img/app-player-download-chs.png" alt="">
+                            </div>
+                    </div>
+                   
+                </div>  <!--右侧整体结束标签-->
         </div>
+
 </div>
 </section>
-
-
-
 
 
 
@@ -1287,10 +1630,12 @@
                         <li><img src="img/youxiang.png" alt="yongxiang"></li>
                     </ul>
                     <p  class="active">官方活动</p>
-                    <a href="#">TapTap 三周年</a>
-                    <a href="#"> 篝火计划</a>
-                    <a href="#"> 涂鸦大赛</a>
-                    <a href="#">2018年度游戏大赏</a>
+                    <div class="bottomalla">
+                        <a href="#">TapTap 三周年</a>
+                        <a href="#"> 篝火计划</a>
+                        <a href="#"> 涂鸦大赛</a>
+                        <a href="#">2018年度游戏大赏</a>
+                    </div>
             </div>
     </div>
 </div>
