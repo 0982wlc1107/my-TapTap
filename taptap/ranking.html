@@ -11,6 +11,7 @@
         font-size: 14px;
         display: flex;
         justify-content: center;
+        background: #f2f2f2;
     }
     ul>li{
         list-style: none;
@@ -19,50 +20,47 @@
         text-decoration: none;
     }
     #container{
-        background: #666;
+        background: #f2f2f2;
         width: 1040px;
         box-sizing: border-box;
         text-align: center;
     }
     .rank{
         width:185px;
-        height: 110px;
+        height: 100px;
         box-sizing: border-box;
         margin-left: 470px;
+        background: url(https://img.tapimg.com/market/images/0e96b2b1fe0895ff21c00d51857feb1c.png) no-repeat;
+        margin-bottom: 30px;
     }
     .rank>div{
-        height: 10px;
+        height: 20px;
     }
     .rank>h1{
         font-size: 32px;
         width: 185px;
         height: 45px;
         box-sizing: border-box;
-        padding-bottom: 10px;
-        margin-bottom: 10px;
-        background:aqua;
     }
     .rank>h3{
-        background-color: red;
         width:185px;
-        height: 40px;
-        box-sizing: border-box;
-        padding-top: 8px;
-        position: relative;
+        height: 30px;
+        padding-top: 4px;
         color: #fff;
+        font-size: 18px;
     }
     .rank>h3>img:first-child{
         position: absolute;
         width:50px;
         height: 45px;
         top:-2px;
-        left: -10px;
+        left: -11px;
     }
     .rank>h3>img:last-child{
         position: absolute;
         width:50px;
         height: 45px;
-        right: -10px;
+        right: -11px;
         top:-2px;
         transform: rotate(180deg);
     }
@@ -82,7 +80,7 @@
         width:1070px;
         height: 21px;
         box-sizing: border-box;
-        margin-top: 10px;
+        margin: 20px 0px;
     }
     .Hottitle>ul>li{
         float: left;
@@ -99,25 +97,38 @@
 /*左侧图片和序号样式*/
     .gamelists{
         width: 1040px;
-        height: 300px;
         margin-top: 10px;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: space-around;
+        position: relative;
+        background-color: #f2f2f2;
+        margin-bottom: 30px;
     }
-    .gamelists>.leftspanandimg{
+    .one,.two,.three{
+        width: 1040px;
+        height: 280px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        background-color: #fff;
+    }
+    .leftspanandimg{
         width: 200px;
         height: 190px;
-        background: red;
+        background: #fff;
         position: relative;
+        margin-top: 20px;
     }
-    .gamelists>.leftspanandimg>span{
+    .leftspanandimg>span{
         position: absolute;
         width: 50px;
         height: 50px;
         background-color: orange;
         top:0px;left: 0px;
     }
-    .gamelists>.leftspanandimg>span>span{
+    .leftspanandimg>span>span{
         position: absolute;
         top: 5px;
         left: 12px;
@@ -125,16 +136,15 @@
         color: #fff;
         font: italic 18px Impact;
     }
-    .gamelists>.leftspanandimg>.spanimg{
-        width: 50px;
-        height: 50px;
+    .leftspanandimg>.spanimg{
+        width: 53.5px;
+        height:53.5px;
         transform: rotate(270deg);
         position: absolute;
         top:0px;left: 0px;
-        border: 1px solid blue;
         z-index: 10;
     }
-    .gamelists>.leftspanandimg>.pic{
+    .leftspanandimg>.pic{
         position: absolute;
         width: 160px;
         height: 160px;
@@ -185,7 +195,8 @@
 /* 右侧图片列表 */
     .rightimgs{
         width: 466px;
-        height: 280px;
+        height: 300px;
+        margin-top: 20px;
     }
     .rightimgs>ul>li{
         float: left;
@@ -194,6 +205,41 @@
     .rightimgs>ul>li>img{
         width:138px;
         height: 240px;
+    }
+    .xilie{
+        position: absolute;
+        bottom: 30px;
+        left: 215px;
+    }
+    .sort{
+        position: absolute;
+        bottom: 30px;
+        right: 470px;;
+    }
+    .sort>a{
+        color: #14B9CB;
+    }
+    .xilie>span{
+        width: 42px;
+        height: 24px;
+        border: 1px solid #14B9CB;
+        border-radius: 10px;
+        margin-right: 10px;
+        font-size: 12px;
+        padding: 5px 10px 5px 10px;
+    }
+    .xilie>span>a{
+        color: #14B9CB;
+    }
+    /* btn按钮样式 */
+    .btn{
+        width: 89px;
+        height: 42px;
+        background: #14B9C8;
+        border: 1px solid #14B9C8;
+        border-radius: 5px;
+        color: #fff;
+        font-size: 18px;
     }
     </style>
 </head>
@@ -206,8 +252,7 @@
         <!-- 排行榜标题 -->
         <div class="rank">
             <div></div>
-            <h1>Top150</h1>
-            
+            <h1>Top150</h1>  
             <h3>
                 排行榜
                 <img src="img/rightsquare.png" alt="">
@@ -233,58 +278,183 @@
         </div>
         <!-- 游戏列表 -->
         <div class="gamelists">
-            <!-- 左侧序号和图片 -->
-                <div class="leftspanandimg">
-                    <img class="spanimg" src="img/forwardsquare.png" alt="">
-                    <span>
-                            <span>1</span>
-                    </span>
-                    <a href="#">1</a>
-                    <img class="pic" src="img/qiji.png" alt="">
-                </div>
-            <!-- 中间文字 -->
-                <div class="centertext">
-                    <h4>   <a href="#"> 闪耀暖暖</a></h4>
-                    <a href="#">厂商  叠纸游戏</a>
-                    <ul>
-                        <li><img src="img/smallbluestar.png" alt=""></li>
-                        <li><img src="img/smallbluestar.png" alt=""></li>
-                        <li><img src="img/smallbluestar.png" alt=""></li>
-                        <li><img src="img/smallbluestar.png" alt=""></li>
-                        <li><img src="img/smallbluestar.png" alt=""></li>
-                    </ul>
-                    <span>5.5</span>
-                    <p>《闪耀暖暖》——暖暖系列首款次世代3D手游！为闪耀的自我而生！
-                            暖暖系列沉淀六年集大成之作，耗时3年倾力打造！
-                            千种3D材质、极致高清细节，打造服装风格的无限可能。
-                            在掌心世界，呈现极致之美。
-                            
-                            恢弘壮阔的大世界、套装背后的设计师、丰富有趣的社交玩法……
-                            ——穿过游戏这个媒介，和暖暖一起前往搭配拥有真实力量的全新世界吧！
-                            
-                            前往680年前的奇迹大陆，寻找毁灭世界的大设计师。
-                            在每一次搭配中遇见不同的自我，与古往今来的设计师并肩作战。
-                            握紧设计背后的记忆与情感，将它化为内心的力量。
-                            一步一步向着奇迹大陆——甚至所有世界的命运靠近！
-                            改变的契机，是被寄托于搭配之中的美的力量。
-                            而美的力量，就来自于内心！</p>
-                </div>
-            <!-- 右侧图片列表 -->
-                <div class="rightimgs">
-                    <ul>
-                        <li><img src="img/nuannuan.jpg" alt="aaa"></li>
-                        <li><img src="img/luoli.jpg" alt="bbb"></li>
-                        <li><img src="img/meimei.jpg" alt="ccc"></li>
-                    </ul>
-                </div>
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
-                <a href="#"></a>
+            <!-- 序号1 -->
+            <div class="one">
+                                        <!-- 左侧序号和图片 -->
+                                        <div class="leftspanandimg">
+                                            <img class="spanimg" src="img/forwardsquare.png" alt="">
+                                            <span>
+                                                    <span>1</span>
+                                            </span>
+                                            <a href="#">1</a>
+                                            <img class="pic" src="img/qiji.png" alt="">
+                                        </div>
+                                    <!-- 中间文字 -->
+                                        <div class="centertext">
+                                            <h4>   <a href="#"> 闪耀暖暖</a></h4>
+                                            <a href="#">厂商  叠纸游戏</a>
+                                            <ul>
+                                                <li><img src="img/smallbluestar.png" alt=""></li>
+                                                <li><img src="img/smallbluestar.png" alt=""></li>
+                                                <li><img src="img/smallbluestar.png" alt=""></li>
+                                                <li><img src="img/smallbluestar.png" alt=""></li>
+                                                <li><img src="img/smallbluestar.png" alt=""></li>
+                                            </ul>
+                                            <span>5.5</span>
+                                            <p>《闪耀暖暖》——暖暖系列首款次世代3D手游！为闪耀的自我而生！
+                                                    暖暖系列沉淀六年集大成之作，耗时3年倾力打造！
+                                                    千种3D材质、极致高清细节，打造服装风格的无限可能。
+                                                    在掌心世界，呈现极致之美。
+                                                    
+                                                    恢弘壮阔的大世界、套装背后的设计师、丰富有趣的社交玩法……
+                                                    ——穿过游戏这个媒介，和暖暖一起前往搭配拥有真实力量的全新世界吧！
+                                                    
+                                                    前往680年前的奇迹大陆，寻找毁灭世界的大设计师。
+                                                    在每一次搭配中遇见不同的自我，与古往今来的设计师并肩作战。
+                                                    握紧设计背后的记忆与情感，将它化为内心的力量。
+                                                    一步一步向着奇迹大陆——甚至所有世界的命运靠近！
+                                                    改变的契机，是被寄托于搭配之中的美的力量。
+                                                    而美的力量，就来自于内心！</p>
+                                        </div>
+                                    <!-- 右侧图片列表 -->
+                                        <div class="rightimgs">
+                                            <ul>
+                                                <li><img src="img/nuannuan.jpg" alt="aaa"></li>
+                                                <li><img src="img/luoli.jpg" alt="bbb"></li>
+                                                <li><img src="img/meimei.jpg" alt="ccc"></li>
+                                            </ul>
+                                        </div>
+                                        <!-- 系列 -->
+                                        <div class="xilie">
+                                        <span> <a href="#">换装</a></span>
+                                        <span>  <a href="#">3D</a></span>
+                                        <span> <a href="#">养成</a></span>
+                                        </div>
+                                        <!-- 分类 -->
+                                        <div class="sort">
+                                            <a href="#">角色扮演</a>
+                                        </div>
+            </div>   
+              <!-- 序号1 -->
+            <div class="two">
+                                        <!-- 左侧序号和图片 -->
+                                        <div class="leftspanandimg">
+                                            <img class="spanimg" src="img/forwardsquare.png" alt="">
+                                            <span>
+                                                    <span>2</span>
+                                            </span>
+                                            <a href="#">1</a>
+                                            <img class="pic" src="img/qiji.png" alt="">
+                                        </div>
+                                    <!-- 中间文字 -->
+                                        <div class="centertext">
+                                            <h4>   <a href="#"> 闪耀暖暖</a></h4>
+                                            <a href="#">厂商  叠纸游戏</a>
+                                            <ul>
+                                                <li><img src="img/smallbluestar.png" alt=""></li>
+                                                <li><img src="img/smallbluestar.png" alt=""></li>
+                                                <li><img src="img/smallbluestar.png" alt=""></li>
+                                                <li><img src="img/smallbluestar.png" alt=""></li>
+                                                <li><img src="img/smallbluestar.png" alt=""></li>
+                                            </ul>
+                                            <span>5.5</span>
+                                            <p>《闪耀暖暖》——暖暖系列首款次世代3D手游！为闪耀的自我而生！
+                                                    暖暖系列沉淀六年集大成之作，耗时3年倾力打造！
+                                                    千种3D材质、极致高清细节，打造服装风格的无限可能。
+                                                    在掌心世界，呈现极致之美。
+                                                    
+                                                    恢弘壮阔的大世界、套装背后的设计师、丰富有趣的社交玩法……
+                                                    ——穿过游戏这个媒介，和暖暖一起前往搭配拥有真实力量的全新世界吧！
+                                                    
+                                                    前往680年前的奇迹大陆，寻找毁灭世界的大设计师。
+                                                    在每一次搭配中遇见不同的自我，与古往今来的设计师并肩作战。
+                                                    握紧设计背后的记忆与情感，将它化为内心的力量。
+                                                    一步一步向着奇迹大陆——甚至所有世界的命运靠近！
+                                                    改变的契机，是被寄托于搭配之中的美的力量。
+                                                    而美的力量，就来自于内心！</p>
+                                        </div>
+                                    <!-- 右侧图片列表 -->
+                                        <div class="rightimgs">
+                                            <ul>
+                                                <li><img src="img/nuannuan.jpg" alt="aaa"></li>
+                                                <li><img src="img/luoli.jpg" alt="bbb"></li>
+                                                <li><img src="img/meimei.jpg" alt="ccc"></li>
+                                            </ul>
+                                        </div>
+                                        <!-- 系列 -->
+                                        <div class="xilie">
+                                        <span> <a href="#">换装</a></span>
+                                        <span>  <a href="#">3D</a></span>
+                                        <span> <a href="#">养成</a></span>
+                                        </div>
+                                        <!-- 分类 -->
+                                        <div class="sort">
+                                            <a href="#">角色扮演</a>
+                                        </div>
+            </div>  
+            <div class="three">
+                    <!-- 左侧序号和图片 -->
+                    <div class="leftspanandimg">
+                        <img class="spanimg" src="img/forwardsquare.png" alt="">
+                        <span>
+                                <span>3</span>
+                        </span>
+                        <a href="#">1</a>
+                        <img class="pic" src="img/qiji.png" alt="">
+                    </div>
+                <!-- 中间文字 -->
+                    <div class="centertext">
+                        <h4>   <a href="#"> 闪耀暖暖</a></h4>
+                        <a href="#">厂商  叠纸游戏</a>
+                        <ul>
+                            <li><img src="img/smallbluestar.png" alt=""></li>
+                            <li><img src="img/smallbluestar.png" alt=""></li>
+                            <li><img src="img/smallbluestar.png" alt=""></li>
+                            <li><img src="img/smallbluestar.png" alt=""></li>
+                            <li><img src="img/smallbluestar.png" alt=""></li>
+                        </ul>
+                        <span>5.5</span>
+                        <p>《闪耀暖暖》——暖暖系列首款次世代3D手游！为闪耀的自我而生！
+                                暖暖系列沉淀六年集大成之作，耗时3年倾力打造！
+                                千种3D材质、极致高清细节，打造服装风格的无限可能。
+                                在掌心世界，呈现极致之美。
+                                
+                                恢弘壮阔的大世界、套装背后的设计师、丰富有趣的社交玩法……
+                                ——穿过游戏这个媒介，和暖暖一起前往搭配拥有真实力量的全新世界吧！
+                                
+                                前往680年前的奇迹大陆，寻找毁灭世界的大设计师。
+                                在每一次搭配中遇见不同的自我，与古往今来的设计师并肩作战。
+                                握紧设计背后的记忆与情感，将它化为内心的力量。
+                                一步一步向着奇迹大陆——甚至所有世界的命运靠近！
+                                改变的契机，是被寄托于搭配之中的美的力量。
+                                而美的力量，就来自于内心！</p>
+                    </div>
+                <!-- 右侧图片列表 -->
+                    <div class="rightimgs">
+                        <ul>
+                            <li><img src="img/nuannuan.jpg" alt="aaa"></li>
+                            <li><img src="img/luoli.jpg" alt="bbb"></li>
+                            <li><img src="img/meimei.jpg" alt="ccc"></li>
+                        </ul>
+                    </div>
+                    <!-- 系列 -->
+                    <div class="xilie">
+                    <span> <a href="#">换装</a></span>
+                    <span>  <a href="#">3D</a></span>
+                    <span> <a href="#">养成</a></span>
+                    </div>
+                    <!-- 分类 -->
+                    <div class="sort">
+                        <a href="#">角色扮演</a>
+                    </div>
+            </div>  
         </div>
+        <button class="btn">更多</button>
 </div>
 </section>
 <!-- 页脚 -->
 <footer></footer>
+<script>
+</script>
 </body>
 </html>

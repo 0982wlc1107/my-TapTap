@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{margin: 0;padding: 0;}
+        body{
+            background-color: #f2f2f2;
+            display: flex;
+            justify-content: center;
+        }
+        #container{
+            width: 1040px;
+            background-color:#00f;
+            margin: 0 auto;
+        }
+        /* 轮播父元素样式 */
+        #lunbo{
+            overflow: hidden;
+            position: relative;
+            width: 1040px;
+            height: 400px;
+        }
+        /* 轮播列表取消黑色原点 */
+        #ul-imgs{
+            list-style: none;
+
+        }
+        /* 轮播动画 */
+        #ul-imgs.transition{
+            transition: all .3s linear;
+        }
+        #ul-imgs>li{    
+            float: left;
+            width: 1040px;
+        }
+        /* 轮播图片样式 */
+        #ul-imgs img{
+        width: 1040px;
+        height: 400px;
+        }
+        #ul-click{
+            width:100px;
+            margin:0 auto;
+            list-style:none;
+            position:absolute;
+            bottom:25px;
+            left:50%;
+            margin-left:-50px;
+        }
+        #ul-click>li{
+            float: left;
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            margin:0 5px;
+            cursor: pointer;
+        }
+        #ul-click>li.active{
+            background-color: #00b9c8;
+        }
+        /* 左右点击按钮样式 */
+        #btn-left,#btn-right{
+            position: absolute;
+            background-color: rgba(0, 0, 0, .6);
+            background-repeat: no-repeat;
+            background-position: center;
+            cursor: pointer;
+        }
+        /* 左箭头背景图片 */
+        #btn-left{
+            width: 50px;
+            height: 100px;
+            top: 150px;
+            left: 0px;
+            text-align: center; 
+        }
+        #btn-left>a>img{
+            width:40px;
+            height: 50px;
+            margin-top: 25px;
+            transform: rotate(180deg);
+        }
+        /* 右箭头背景图片 */
+        #btn-right>a>img{
+            width:40px;
+            height: 50px;
+            margin-top: 25px;
+        }
+        #btn-right{
+            right: 0px;
+            width: 50px;
+            height: 100px;
+            top: 150px;
+            text-align: center; 
+        }
+        /* 左右箭头悬停时样式 */
+        #btn-left:hover,#btn-right:hover{
+            background-size: 40px 70px;
+        }
+    /* 轮播图右下角消息和热量样式 */
+        .information{
+            width: 14px;
+            height: 14px;
+            position: absolute;
+            bottom: 20px;
+            right: 40px;
+        }
+        .hotspan{
+            position: absolute;
+            right: 15px;
+            bottom: 20px;
+            color: #fff;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+<header></header>
+<section>
+<div id="container">
+    <!-- 轮播图 -->
+    <div id="lunbo">
+            <!-- 左边箭头按钮 -->
+            <span id="btn-left">
+                    <a href="#">
+                            <img src="img/arrow.png" alt="">
+                    </a>
+                   
+            </span>
+            <!-- 轮播图片列表 -->
+            <ul id="ul-imgs" style="width:4160px; margin-left: 0px;">
+                    <li>
+                            <a href="#">
+                                    <img src="img/world.jpg" alt="">
+                            </a>    
+                    </li>
+                    <li>
+                            <a href="#">
+                                    <img src="img/ball.jpg" alt="">
+                            </a>   
+                    </li>
+                    <li>
+                            <a href="#">
+                                    <img src="img/tanke.jpg" alt="">
+                            </a>
+                    </li>
+                    <li>
+                            <a href="#">
+                                    <img src="img/world.jpg" alt="">
+                            </a>
+                    </li>
+            </ul>
+            <!-- 下面可以点击的小原点 -->
+            <ul id="ul-click">
+                    <li id="active"></li>
+                    <li></li>
+                    <li></li>      
+            </ul>
+            <!-- 右边箭头按钮 -->
+            <span id="btn-right">
+                <a href="#">
+                        <img src="img/arrow.png" alt="">
+                </a>      
+            </span>
+            <img class="information" src="img/information.png" alt="">
+            <span class="hotspan">141</span>  
+    </div>
+</div>
+</section>
+<footer></footer>
+<script>
+    var i=0;//现在正在显示第几张图片，从0开始
+    var LIWIDTH=1040;//每个li的固定宽度
+    var DURATION=500;//每次轮播动画持续的时间
+    var LICOUNT=3;//li的总个数
+    //要移动的ul
+    var ulImgs=document.getElementById("ul-imgs");
+    //包含小圆点列表的ul
+    var ulIdxs=document.getElementById("ul-click");
+    //小圆点的元素列表
+    var lis=ulIdxs.children;
+    //从当前位置移动到任意一个范围内的位置
+    function moveTo(to){
+      //如果用户没有传入要跳到第几张图，就默认跳到当前图的下一个张
+      if(to==undefined){
+        to=i+1;
+      }
+      if(i==0){//如果滚动从头开始，再重新加上transition
+        if(to>i){    //如果正常顺序轮播，那么久添加动画效果
+            ulImgs.className="transition";
+        }else{      //如果反向顺序轮播，则清除动画效果，并将marginleft 拉到最后一张的位置
+            ulImgs.className="";
+            ulImgs.style.marginLeft=-LICOUNT*LIWIDTH+"px";
+            // 之后利用定时器强行将跳转操作和添加回动画效果隔开，若不用  则会呈现出从开始跳到最后的过程  不合理
+            setTimeout(function(){
+                moveTo(LICOUNT-1);
+            },100);
+            return;
+        }
+       
+      }
+      i=to;  // 先将表示第几张的变量i 变为目标位置 /再用i计算ulImgs的marginleft距离
+      ulImgs.style.marginLeft=-i*LIWIDTH+"px";
+      //先删除所有小圆点的class
+      for(var li of lis){
+        li.className="";
+      }
+      if(i==LICOUNT){
+        i=0;
+        //当transition 动画播放完之后执行   
+        setTimeout(function(){
+          ulImgs.className="";    //清除transition 动画属性
+          ulImgs.style.marginLeft=0;    //将ulImgs的marginleft变回0   拉到最开始的位置
+        },DURATION)
+      }
+      //给当前位置的小圆点添加class   active   添加背景色
+      lis[i].className="active";
+    }
+</script>
+</body>
+</html>

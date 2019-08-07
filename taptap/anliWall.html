@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{ margin: 0px;padding: 0px;}
+        #container{
+            display: flex;
+            justify-content: center;
+            background: #f2f2f2;
+        }
+        .father{
+            width: 1040px;
+            text-align: center;
+            background-color: aqua;
+        }
+        .title{
+            background: #f2f2f2;;
+            position: relative;
+        }
+        .title>h1{
+            margin-bottom: 5px;
+        }
+        .title>p{
+            position: relative;
+            width: 146px;
+            height: 20px;
+            font-size: 14px;
+            margin-left: 450px;
+            z-index: 100;
+            background: #f2f2f2;
+        }
+        .title>div{
+            height: 1px;
+            width: 1040px;
+            background: #ddd;
+            position: absolute;
+            bottom:8px;
+            left: 0px;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+<header></header>
+<section>   
+<div id="container">
+<div class="father">
+    <!-- 标题    -->
+    <div class="title">
+        <h1>Tap 安利墙</h1>
+        <p>看看大家在玩什么</p>
+        <div></div>
+    </div>
+</div>
+</div>
+</section>
+<footer></footer>
+</body>
+</html>
