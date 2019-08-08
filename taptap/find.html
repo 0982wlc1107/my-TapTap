@@ -12,10 +12,17 @@
             display: flex;
             justify-content: center;
         }
+        ul>li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
         #container{
             width: 1040px;
-            background-color:#00f;
+            background: color #f2f2f2;;
             margin: 0 auto;
+            font-size: 14px;
         }
         /* 轮播父元素样式 */
         #lunbo{
@@ -31,7 +38,7 @@
         }
         /* 轮播动画 */
         #ul-imgs.transition{
-            transition: all .3s linear;
+            transition: all .5s linear;
         }
         #ul-imgs>li{    
             float: left;
@@ -70,6 +77,7 @@
             background-repeat: no-repeat;
             background-position: center;
             cursor: pointer;
+            opacity: .7;
         }
         /* 左箭头背景图片 */
         #btn-left{
@@ -98,10 +106,6 @@
             top: 150px;
             text-align: center; 
         }
-        /* 左右箭头悬停时样式 */
-        #btn-left:hover,#btn-right:hover{
-            background-size: 40px 70px;
-        }
     /* 轮播图右下角消息和热量样式 */
         .information{
             width: 14px;
@@ -117,6 +121,222 @@
             color: #fff;
             font-size: 12px;
         }
+/*分类列表样式 */
+        #container>ul{
+            width: 1040px;
+            height: 64px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        #container>ul>li{
+            height: 34px;
+            padding: 0 15px;
+            line-height: 34px;
+            border-radius: 10px;
+            background-color: #00b9c8;
+        }
+        #container>ul>li>a{
+            color: #fff;
+            font-size: 16px;
+        }
+/*每日发现模块*/
+        .find{
+            width: 100%;
+            height: 279px;
+
+        }
+        .findandmore{
+            width: 100%;
+            height: 31px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .findandmore>a{
+            color: #00b9c8;
+        }
+        .findgamelist{
+            width: 1040px;
+            height: 241px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .listone{
+            width: 160px;
+            height: 225px;
+            background-color: #fff;
+        }
+        .listone>img{
+            width: 128px;
+            height: 128px;
+            margin-left: 16px;
+            margin-top: 15px;
+            margin-bottom: 10px;
+        }
+        .listone>.gamenameandassess{
+            padding: 0 16px;
+        }
+        .gamenameandassess>p{
+            max-width: 128px;
+            display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 1;
+             overflow: hidden;
+             margin-bottom: 10px;
+             font-size: 16px;
+        }
+        .gamenameandassess>.assess>a{
+            color: gray;
+
+        }
+        .gamenameandassess>.assess>span{
+            margin-left: 50px;
+ 
+        }
+
+        .gamenameandassess>.assess>span>img{
+            width: 12px;
+            height: 12px;
+            margin-left: 5px;
+        }
+/*往期专题模块  */
+        .subject{
+            width: 100%;
+            height: 196px;
+        }
+        .subjectandmore{
+            height: 31px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .subjectandmore>a{
+            color: #00b9c8;
+        }
+        .piclist{
+            height: 150px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        .piclist>img{
+            width: 335px;
+            height: 150px;
+        }
+        .recommend{
+            margin-top: 10px;
+            height: 229px;
+        }
+        .recommend>.recommendandmore{
+            height: 31px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .recommendandmore>a{
+            color: #00b9c8;
+        }
+        .recommendpics{
+            height:183px;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+        .recommendpics>ul{
+            width: 100%;
+            height: 183px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .recommendpics>ul>li{
+            width: 176px;
+            height: 183px;
+        }
+        .picone{
+            background: #f2f2f2;
+            text-align: center;
+        }
+        .picone>div{
+            margin-bottom: 5px;    
+        }
+        .picone>div>a{
+      
+            text-align: center;
+        }
+        .picone>div>a>img{
+            width:128px;
+            height: 128px;
+            border-radius: 50%;
+            background-image: url(img/recommend.png);
+            background-repeat: no-repeat;
+        }
+        .picone>p{
+            margin-top: 5px;
+            color: #999;
+            font-size: 12px;
+        }
+        .picone>a{
+            color: black;
+        }
+/*新游预约模块  */
+        .newgameorder{
+            height: 279px;
+            width: 1040px;
+            margin: 10px 0;
+        }
+        .newgameorderandmore{
+            width: 100%;
+            height: 31px;
+           display: flex;
+           justify-content: space-between;
+           margin-bottom: 10px;
+        }
+        .newgameorderandmore>a{
+            color: #00b9c8;
+        }
+        .newgamelist{
+            margin-top: 10px;
+            width: 100%;
+            height: 241px;
+        }
+        .newgamelist>ul{
+            display: flex;
+            justify-content: space-between;
+        }
+        .onenewgame{
+            width: 160px;
+            height: 225px;
+            font-size: 12px;
+            background: #fff;
+        }
+        .newgamelist .onenewgame>img{
+            width: 128px;
+            height: 128px;
+            margin-top: 10px;
+            margin-left: 15px;
+        }
+         .pandspan{
+            margin-top: 10px;
+            width: 130px;
+            height: 55px;
+            padding: 0px 16px 10px;
+        }
+        .pandspan>p{
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .spanandimg>a{
+            color:gray;
+            font-size: 14px;
+        }
+        .spanandimg>span{
+            margin-left: 55px;
+        }
+        .spanandimg>span>span{
+            margin-right: 5px;
+            font-size: 14px;
+        }
+        .spanandimg>span>img{
+            width: 14px;
+            height: 14px;
+        }
     </style>
 </head>
 <body>
@@ -126,12 +346,12 @@
     <!-- 轮播图 -->
     <div id="lunbo">
             <!-- 左边箭头按钮 -->
-            <span id="btn-left">
+            <div id="btn-left" class="hidden">
                     <a href="#">
                             <img src="img/arrow.png" alt="">
                     </a>
                    
-            </span>
+            </div>
             <!-- 轮播图片列表 -->
             <ul id="ul-imgs" style="width:4160px; margin-left: 0px;">
                     <li>
@@ -162,18 +382,409 @@
                     <li></li>      
             </ul>
             <!-- 右边箭头按钮 -->
-            <span id="btn-right">
+            <div id="btn-right" class="hidden">
                 <a href="#">
                         <img src="img/arrow.png" alt="">
                 </a>      
-            </span>
+            </div>
             <img class="information" src="img/information.png" alt="">
             <span class="hotspan">141</span>  
+    </div>
+    <!-- 分类列表 -->
+    <ul>
+        <li><a href="#">往期推荐</a></li>
+        <li><a href="#">单机</a></li>
+        <li><a href="#">角色扮演</a></li>
+        <li><a href="#">动作</a></li>
+        <li><a href="#">MOBA</a></li>
+        <li><a href="#">策略</a></li>
+        <li><a href="#">卡牌</a></li>
+        <li><a href="#">生存</a></li>
+        <li><a href="#">模拟</a></li>
+        <li><a href="#">竞速</a></li>
+        <li><a href="#">益智</a></li>
+        <li><a href="#">二次元</a></li>
+    </ul>
+    <!-- 每日发现模块 -->
+    <div class="find">
+        <!-- 每日新发现和更多 -->
+        <div class="findandmore">
+            <h3>每日新发现</h3>
+            <a href="#">更多</a>
+        </div>
+        <hr>
+        <!-- 发现游戏列表 -->
+        <div class="findgamelist">
+            <!-- 列表1 -->
+            <div class="listone">
+                <img src="img/sword.png" alt="">    
+                <div class="gamenameandassess">
+                        <p>剑和远行（测试服）</p>
+                        <span class="assess">
+                                <a href="#">策略</a>
+                                <span>
+                                        <span>8.9</span>
+                                        <img src="img/graystar.png" alt="">
+                                </span>
+                        </span> 
+                </div>
+            </div>
+            <!-- 列表二 -->
+            <div class="listone">
+                    <img src="img/sword.png" alt="">    
+                    <div class="gamenameandassess">
+                            <p>剑和远行（测试服）</p>
+                            <span class="assess">
+                                    <a href="#">策略</a>
+                                    <span>
+                                            <span>8.9</span>
+                                            <img src="img/graystar.png" alt="">
+                                    </span>
+                            </span> 
+                    </div>
+            </div>
+            <!-- 列表三 -->
+            <div class="listone">
+                    <img src="img/sword.png" alt="">    
+                    <div class="gamenameandassess">
+                            <p>剑和远行（测试服）</p>
+                            <span class="assess">
+                                    <a href="#">策略</a>
+                                    <span>
+                                            <span>8.9</span>
+                                            <img src="img/graystar.png" alt="">
+                                    </span>
+                            </span> 
+                    </div>
+            </div>
+            <!-- 列表四 -->
+            <div class="listone">
+                    <img src="img/sword.png" alt="">    
+                    <div class="gamenameandassess">
+                            <p>剑和远行（测试服）</p>
+                            <span class="assess">
+                                    <a href="#">策略</a>
+                                    <span>
+                                            <span>8.9</span>
+                                            <img src="img/graystar.png" alt="">
+                                    </span>
+                            </span> 
+                    </div>
+            </div>
+            <!-- 列表五 -->
+            <div class="listone">
+                    <img src="img/sword.png" alt="">    
+                    <div class="gamenameandassess">
+                            <p>剑和远行（测试服）</p>
+                            <span class="assess">
+                                    <a href="#">策略</a>
+                                    <span>
+                                            <span>8.9</span>
+                                            <img src="img/graystar.png" alt="">
+                                    </span>
+                            </span> 
+                    </div>
+            </div>
+            <!-- 列表六 -->
+            <div class="listone">
+                    <img src="img/sword.png" alt="">    
+                    <div class="gamenameandassess">
+                            <p>剑和远行（测试服）</p>
+                            <span class="assess">
+                                    <a href="#">策略</a>
+                                    <span>
+                                            <span>8.9</span>
+                                            <img src="img/graystar.png" alt="">
+                                    </span>
+                            </span> 
+                    </div>
+            </div>
+
+        </div>  <!--发现游戏列表结束-->
+    </div>
+    <!-- 最近更新模块 -->
+    <div class="find">
+            <!-- 最近和更多 -->
+            <div class="findandmore">
+                <h3>最近更新</h3>
+                <a href="#">更多</a>
+            </div>
+            <hr>
+            <!-- 最近更新列表 -->
+            <div class="findgamelist">
+                <!-- 列表1 -->
+                <div class="listone">
+                    <img src="img/lushi.png" alt="">    
+                    <div class="gamenameandassess">
+                            <p>炉石传说</p>
+                            <span class="assess">
+                                    <a href="#">策略</a>
+                                    <span>
+                                            <span>6.1</span>
+                                            <img src="img/graystar.png" alt="">
+                                    </span>
+                            </span> 
+                    </div>
+                </div>
+                <!-- 列表二 -->
+                <div class="listone">
+                        <img src="img/lushi.png" alt="">    
+                        <div class="gamenameandassess">
+                                <p>炉石传说</p>
+                                <span class="assess">
+                                        <a href="#">策略</a>
+                                        <span>
+                                                <span>8.9</span>
+                                                <img src="img/graystar.png" alt="">
+                                        </span>
+                                </span> 
+                        </div>
+                </div>
+                <!-- 列表三 -->
+                <div class="listone">
+                        <img src="img/lushi.png" alt="">    
+                        <div class="gamenameandassess">
+                                <p>炉石传说</p>
+                                <span class="assess">
+                                        <a href="#">策略</a>
+                                        <span>
+                                                <span>8.9</span>
+                                                <img src="img/graystar.png" alt="">
+                                        </span>
+                                </span> 
+                        </div>
+                </div>
+                <!-- 列表四 -->
+                <div class="listone">
+                        <img src="img/lushi.png" alt="">    
+                        <div class="gamenameandassess">
+                                <p>炉石传说</p>
+                                <span class="assess">
+                                        <a href="#">策略</a>
+                                        <span>
+                                                <span>8.9</span>
+                                                <img src="img/graystar.png" alt="">
+                                        </span>
+                                </span> 
+                        </div>
+                </div>
+                <!-- 列表五 -->
+                <div class="listone">
+                        <img src="img/lushi.png" alt="">    
+                        <div class="gamenameandassess">
+                                <p>炉石传说</p>
+                                <span class="assess">
+                                        <a href="#">策略</a>
+                                        <span>
+                                                <span>8.9</span>
+                                                <img src="img/graystar.png" alt="">
+                                        </span>
+                                </span> 
+                        </div>
+                </div>
+                <!-- 列表六 -->
+                <div class="listone">
+                        <img src="img/lushi.png" alt="">    
+                        <div class="gamenameandassess">
+                                <p>炉石传说</p>
+                                <span class="assess">
+                                        <a href="#">策略</a>
+                                        <span>
+                                                <span>8.9</span>
+                                                <img src="img/graystar.png" alt="">
+                                        </span>
+                                </span> 
+                        </div>
+                </div>
+    
+            </div>  <!--最近更新列表结束-->
+    </div>
+    <!-- 往期专题模块 -->
+    <div class="subject">
+            <div class="subjectandmore">
+                <h3>往期专题</h3>
+                <a href="#">更多</a>
+            </div>
+            <hr>
+            <div class="piclist">
+                <img src="img/ball.jpg" alt="">
+                <img src="img/worker.jpg" alt="">
+                <img src="img/wellgame.jpeg" alt="">
+            </div>
+    </div>
+    <!-- 推荐玩家模块 -->
+    <div class="recommend">
+                <div class="recommendandmore">
+                        <h3>推荐玩家</h3>
+                        <a href="#">更多</a>
+                </div>
+                <hr>
+                <div class="recommendpics">
+                
+                    <ul>
+                        <!-- 玩家一 -->
+                        <li class="picone">
+                                    <div>
+                                        <a href="#">
+                                            <img src="img/recommend.png" alt="">
+                                        </a>
+                                    </div>
+                                    <a href="#">列王守卫</a>
+                                    <p>列王守卫制作组 官方</p>
+                        </li>
+                        <li class="picone">
+                                <div>
+                                        <a href="#">
+                                            <img src="img/recommend.png" alt="">
+                                        </a>
+                                    </div>
+                                    <a href="#">列王守卫</a>
+                                    <p>列王守卫制作组 官方</p>
+                        </li>
+                        <li class="picone">
+                                <div>
+                                        <a href="#">
+                                            <img src="img/recommend.png" alt="">
+                                        </a>
+                                    </div>
+                                    <a href="#">列王守卫</a>
+                                    <p>列王守卫制作组 官方</p>
+                        </li>
+                        <li class="picone">
+                                <div>
+                                        <a href="#">
+                                            <img src="img/recommend.png" alt="">
+                                        </a>
+                                    </div>
+                                    <a href="#">列王守卫</a>
+                                    <p>列王守卫制作组 官方</p>
+                        </li>
+                        <li class="picone">
+                                <div>
+                                        <a href="#">
+                                            <img src="img/recommend.png" alt="">
+                                        </a>
+                                    </div>
+                                    <a href="#">列王守卫</a>
+                                    <p>列王守卫制作组 官方</p>
+                        </li>
+                        <li class="picone">
+                                <div>
+                                        <a href="#">
+                                            <img src="img/recommend.png" alt="">
+                                        </a>
+                                    </div>
+                                    <a href="#">列王守卫</a>
+                                    <p>列王守卫制作组 官方</p>
+                        </li>
+                    </ul>
+
+              
+                </div>
+    </div>
+    <!-- 新游预约 -->
+    <div class="newgameorder">
+                <!-- 新游预约和更多 -->
+                <div class="newgameorderandmore">
+                <h3>新游预约</h3> 
+                <a href="#">更多</a>
+                </div>
+        <hr>
+                <!-- 新游列表 -->
+                <div class="newgamelist">
+                    <ul>
+                                <!-- 新游一 -->
+                                <li class="onenewgame">
+                                <img src="img/dragon.png" alt=""> 
+                                <div class="pandspan">
+                                        <p>魔龙战争</p>
+                                        <span class="spanandimg">
+                                                <a href="#">策略</a>
+                                                <span>
+                                                        <span>6.1</span>
+                                                        <img src="img/graystar.png" alt="">
+                                                </span>
+                                        </span> 
+                                    </div>
+                                </li>
+                                <!-- 新游二 -->
+                                <li class="onenewgame">
+                                        <img src="img/dragon.png" alt=""> 
+                                        <div class="pandspan">
+                                            <p>魔龙战争</p>
+                                            <span class="spanandimg">
+                                                    <a href="#">策略</a>
+                                                    <span>
+                                                            <span>6.1</span>
+                                                            <img src="img/graystar.png" alt="">
+                                                    </span>
+                                            </span> 
+                                        </div>
+                                </li>
+                                <!-- 新游三 -->
+                                <li class="onenewgame">
+                                    <img src="img/dragon.png" alt=""> 
+                                    <div class="pandspan">
+                                         <p>魔龙战争</p>
+                                         <span class="spanandimg">
+                                                 <a href="#">策略</a>
+                                                 <span>
+                                                         <span>6.1</span>
+                                                         <img src="img/graystar.png" alt="">
+                                                 </span>
+                                         </span> 
+                                     </div>
+                                 </li>
+                                <!-- 新游四 -->
+                                <li class="onenewgame">
+                                        <img src="img/dragon.png" alt=""> 
+                                        <div class="pandspan">
+                                             <p>魔龙战争</p>
+                                             <span class="spanandimg">
+                                                     <a href="#">策略</a>
+                                                     <span>
+                                                             <span>6.1</span>
+                                                             <img src="img/graystar.png" alt="">
+                                                     </span>
+                                             </span> 
+                                         </div>
+                                </li>
+                                <!-- 新游五 -->
+                                <li class="onenewgame">
+                                        <img src="img/dragon.png" alt=""> 
+                                        <div class="pandspan">
+                                             <p>魔龙战争</p>
+                                             <span class="spanandimg">
+                                                     <a href="#">策略</a>
+                                                     <span>
+                                                             <span>6.1</span>
+                                                             <img src="img/graystar.png" alt="">
+                                                     </span>
+                                             </span> 
+                                         </div>
+                                </li>
+                                <!-- 新游六 -->
+                                <li class="onenewgame">
+                                        <img src="img/dragon.png" alt=""> 
+                                        <div class="pandspan">
+                                             <p>魔龙战争</p>
+                                             <span class="spanandimg">
+                                                     <a href="#">策略</a>
+                                                     <span>
+                                                             <span>6.1</span>
+                                                             <img src="img/graystar.png" alt="">
+                                                     </span>
+                                             </span> 
+                                         </div>
+                                </li>
+                    </ul>
+                </div>
     </div>
 </div>
 </section>
 <footer></footer>
 <script>
+//轮播图片部分
     var i=0;//现在正在显示第几张图片，从0开始
     var LIWIDTH=1040;//每个li的固定宽度
     var DURATION=500;//每次轮播动画持续的时间
@@ -181,9 +792,9 @@
     //要移动的ul
     var ulImgs=document.getElementById("ul-imgs");
     //包含小圆点列表的ul
-    var ulIdxs=document.getElementById("ul-click");
+    var ulClick=document.getElementById("ul-click");
     //小圆点的元素列表
-    var lis=ulIdxs.children;
+    var lis=ulClick.children;
     //从当前位置移动到任意一个范围内的位置
     function moveTo(to){
       //如果用户没有传入要跳到第几张图，就默认跳到当前图的下一个张
@@ -221,6 +832,68 @@
       //给当前位置的小圆点添加class   active   添加背景色
       lis[i].className="active";
     }
+//自动轮播
+var  interval=3000;
+var  timer=setInterval(function(){
+    moveTo();
+},5000);
+var lunbo=document.getElementById("lunbo");
+lunbo.onmouseover=function(){
+    clearInterval(timer);
+    //控制左右箭头显示
+    btnLeft.style.display="block";
+    btnRight.style.display="block";
+}
+lunbo.onmouseout=function(){
+    timer=setInterval(function(){
+        moveTo();
+    },5000)
+    btnLeft.style.display="none";
+    btnRight.style.display="none";
+}
+//左右箭头控制轮播
+    var  btnLeft=document.getElementById("btn-left");
+    var  btnRight=document.getElementById("btn-right");
+    var  canClick=true;
+    btnLeft.onclick=function(){
+        move(-1);
+    }
+    btnRight.onclick=function(){
+        move(1);
+    }
+    function move(n) {
+        if(canClick){
+            moveTo(i+n);
+            canClick=false;
+            setTimeout(function(){
+                canClick=true;
+            },DURATION+100)
+        }
+    }
+
+//小圆点控制轮播
+var ulClick=document.getElementById("ul-click");
+var canClick=true;
+ulClick.onclick=function(e){
+    if(canClick){
+        var li=e.target;
+        if(li.nodeName=="LI"){
+            if(li.className!=="active"){
+                for(var i=0;i<lis.length;i++){
+                if(lis[i]==li){
+                    break;
+                    }
+                }           
+                moveTo(i);
+                setTimeout(function(){
+                    canClick=true;
+                },DURATION);  
+            }
+        }
+    }
+}
+
+
 </script>
 </body>
 </html>
