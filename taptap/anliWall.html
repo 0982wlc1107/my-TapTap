@@ -7,18 +7,30 @@
     <title>Document</title>
     <style>
         *{ margin: 0px;padding: 0px;}
+        body{
+            background: #f2f2f2;
+        }
+        ul>li{
+            list-style: none;
+        }
+        a{
+            text-decoration: none;  
+        }
+        section{
+            width: 1040px;
+            margin: 0 auto;
+        }
         #container{
-            display: flex;
-            justify-content: center;
+            width: 1040px;
             background: #f2f2f2;
         }
         .father{
             width: 1040px;
             text-align: center;
-            background-color: aqua;
+            margin-bottom: 10px;
         }
         .title{
-            background: #f2f2f2;;
+            background: #f2f2f2;
             position: relative;
         }
         .title>h1{
@@ -42,20 +54,662 @@
             left: 0px;
             z-index: 1;
         }
+/*玩家评价部分样式*/
+        .playerassess{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            background-color:#f2f2f2;
+        }
+        .playerassess>div{
+            width: 333px;
+        }
+        .one{
+            width: 333px;
+            margin-bottom: 20px;
+            background: #fff;
+        }
+        .one>.gamenameandpic{
+            width: 313px;
+            height: 61px;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin-left: 10px;
+        }
+        .gamenameandpic>img{
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        .gamenameandpic a{
+            font-size: 18px;
+            color: #333;
+            font-weight: 400;
+        }
+        .gamenameandpic ul>li{
+            float: left;
+            margin: 0px 5px 0px 0px;
+        }
+        .gamenameandpic ul>li>img{
+            width: 12px;
+            height: 12px;
+        }
+        .line{
+            width: 313px;
+            height: 1px;
+            background: black;
+            margin: 10px 0px 10px 10px;
+        }
+        .assess{
+            position: relative;
+            width: 268px;
+            max-height: 242px;
+            margin-bottom: 15px;
+        }
+         .assess p{
+             width: 268px;
+             max-height: 242px;
+             margin-left:35px;
+             font-size: 14px;
+             color: #333;
+             padding-top: 10px;
+             display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 11;
+                overflow: hidden;
+        } 
+        .leftimg,.rightimg{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+        }
+        .leftimg{
+            top: 0px;
+            left: 10px;
+            opacity: .5;
+        }
+        .rightimg{
+            bottom: -8px;
+            right: -55px;
+            transform: rotate(180deg);
+            opacity: .5;
+        }
+        .authorname{
+            width: 100%;
+            height: 22px;
+        }
+        .authorname>.zanauthor{
+            width: 30px;
+            height: 24px;
+            margin-left: 10px;
+        }
+        .authorname img{
+            width: 14px;
+            height: 14px;
+        }
+        .authorname>.playername{
+            margin-left: 225px;
+            color: #14b9c8;
+        }
     </style>
 </head>
 <body>
 <header></header>
 <section>   
 <div id="container">
-<div class="father">
-    <!-- 标题    -->
-    <div class="title">
-        <h1>Tap 安利墙</h1>
-        <p>看看大家在玩什么</p>
-        <div></div>
+    <div class="father">
+            <!-- 标题    -->
+            <div class="title">
+                <h1>Tap 安利墙</h1>
+                <p>看看大家在玩什么</p>
+                <!-- 黑线 -->
+                <div></div>
+            </div>
     </div>
-</div>
+    <!-- 玩家评价 -->
+    <div class="playerassess">
+        <!-- 第一列 -->
+        <div>   
+                    <!-- 第一个 -->
+                    <div class="one">
+                        <!-- 游戏名和图片 -->
+                        <div class="gamenameandpic">
+                            <img src="img/food.png" alt="">
+                            <div>
+                                <a href="#">食物语(测试服)</a>
+                                <ul>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                </ul>
+                            
+                            </div>
+                        </div>
+                        <!-- 黑色分割线 -->
+                        <div class="line"></div>
+                        <!-- 评价 -->
+                        <div class="assess">
+                            <img class="leftimg" src="img/reference.png" alt="">
+                            <img class="rightimg" src="img/reference.png" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam repudiandae deleniti dicta repellendus quae, expedita ullam ducimus maxime alias architecto corrupti? Recusandae assumenda nulla maiores facilis! Quidem veniam laboriosam vel.</p>
+                           
+                        </div>
+                        <!-- 玩家名 -->
+                        <p class="authorname">
+                            <a class="zanauthor">
+                                    <img src="img/ding.png" alt="">
+                            </a>
+                            <a class="playername" href="#">--parado</a>
+                        </p>
+                    </div>
+                    <!-- 第二个 -->
+                    <div class="one">
+                            <!-- 游戏名和图片 -->
+                            <div class="gamenameandpic">
+                                <img src="img/food.png" alt="">
+                                <div>
+                                    <a href="#">食物语(测试服)</a>
+                                    <ul>
+                                        <li>
+                                            <img src="img/smallbluestar.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="img/smallbluestar.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="img/smallbluestar.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="img/smallbluestar.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="img/smallbluestar.png" alt="">
+                                        </li>
+                                    </ul>
+                                
+                                </div>
+                            </div>
+                            <!-- 黑色分割线 -->
+                            <div class="line"></div>
+                            <!-- 评价 -->
+                            <div class="assess">
+                                <img class="leftimg" src="img/reference.png" alt="">
+                                <img class="rightimg" src="img/reference.png" alt="">
+                                <p>看到是卡牌游戏，刚开始是拒绝的。毕竟现在卡牌做的好的有那么多家，换汤不换药。玩了以后啪啪打脸，游戏虽然是用卡牌作为招数来打斗的。但是有两个与其他卡牌不同的设计。
+
+                                        1.游戏有随从，别的卡牌都是用卡牌代替随从，这个游戏是卡牌表示招数，随从可以随时召唤出来帮助战斗，多一个随从就是多一次出卡的机会。小红帽召唤的随从最有意思，竟然可以召唤大灰狼。
+                                        
+                                        2.第二个设计就是有游戏骰子，可以跳过1-6个关卡。这个道具帮助我跳过了不少步骤，是我在这场童话冒险中最爱用的道具，没有之一。</p>
+                               
+                            </div>
+                            <!-- 玩家名 -->
+                            <p class="authorname">
+                                <a class="zanauthor">
+                                        <img src="img/ding.png" alt="">
+                                </a>
+                                <a class="playername" href="#">--parado</a>
+                            </p>
+                        </div>
+                    <!-- 第三个 -->
+                    <div class="one">
+                            <!-- 游戏名和图片 -->
+                            <div class="gamenameandpic">
+                                <img src="img/food.png" alt="">
+                                <div>
+                                    <a href="#">食物语(测试服)</a>
+                                    <ul>
+                                        <li>
+                                            <img src="img/smallbluestar.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="img/smallbluestar.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="img/smallbluestar.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="img/smallbluestar.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="img/smallbluestar.png" alt="">
+                                        </li>
+                                    </ul>
+                                
+                                </div>
+                            </div>
+                            <!-- 黑色分割线 -->
+                            <div class="line"></div>
+                            <!-- 评价 -->
+                            <div class="assess">
+                                <img class="leftimg" src="img/reference.png" alt="">
+                                <img class="rightimg" src="img/reference.png" alt="">
+                                <p>立绘好评！！！建模就emmmm…有种不是同一个游戏的赶脚…羊好可爱！比主角建模好看hhh开场动画还不错，但是后期好像就没什么剧情了？玩法不是我的菜…推了半天没继续玩了，对别的不予置评。小白超可爱！有个问题想问小白:开场动画里超帅的那个动作是怎么把耳朵瞬间从帽外变到头上的吖！（精灵没有什么是不可能！hhh）</p>
+                               
+                            </div>
+                            <!-- 玩家名 -->
+                            <p class="authorname">
+                                <a class="zanauthor">
+                                        <img src="img/ding.png" alt="">
+                                </a>
+                                <a class="playername" href="#">--parado</a>
+                            </p>
+                        </div>
+                    <!-- 第四个 -->
+                    <div class="one">
+                            <!-- 游戏名和图片 -->
+                            <div class="gamenameandpic">
+                                <img src="img/food.png" alt="">
+                                <div>
+                                    <a href="#">食物语(测试服)</a>
+                                    <ul>
+                                        <li>
+                                            <img src="img/smallbluestar.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="img/smallbluestar.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="img/smallbluestar.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="img/smallbluestar.png" alt="">
+                                        </li>
+                                        <li>
+                                            <img src="img/smallbluestar.png" alt="">
+                                        </li>
+                                    </ul>
+                                
+                                </div>
+                            </div>
+                            <!-- 黑色分割线 -->
+                            <div class="line"></div>
+                            <!-- 评价 -->
+                            <div class="assess">
+                                <img class="leftimg" src="img/reference.png" alt="">
+                                <img class="rightimg" src="img/reference.png" alt="">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam repudiandae deleniti dicta repellendus quae, expedita ullam ducimus maxime alias architecto corrupti? Recusandae assumenda nulla maiores facilis! Quidem veniam laboriosam vel.</p>
+                               
+                            </div>
+                            <!-- 玩家名 -->
+                            <p class="authorname">
+                                <a class="zanauthor">
+                                        <img src="img/ding.png" alt="">
+                                </a>
+                                <a class="playername" href="#">--parado</a>
+                            </p>
+                        </div>
+        </div>
+        <!-- 第二列 -->
+        <div>   
+                <!-- 第一个 -->
+                <div class="one">
+                    <!-- 游戏名和图片 -->
+                    <div class="gamenameandpic">
+                        <img src="img/food.png" alt="">
+                        <div>
+                            <a href="#">食物语(测试服)</a>
+                            <ul>
+                                <li>
+                                    <img src="img/smallbluestar.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="img/smallbluestar.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="img/smallbluestar.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="img/smallbluestar.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="img/smallbluestar.png" alt="">
+                                </li>
+                            </ul>
+                        
+                        </div>
+                    </div>
+                    <!-- 黑色分割线 -->
+                    <div class="line"></div>
+                    <!-- 评价 -->
+                    <div class="assess">
+                        <img class="leftimg" src="img/reference.png" alt="">
+                        <img class="rightimg" src="img/reference.png" alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam repudiandae deleniti dicta repellendus quae, expedita ullam ducimus maxime alias architecto corrupti? Recusandae assumenda nulla maiores facilis! Quidem veniam laboriosam vel.</p>
+                       
+                    </div>
+                    <!-- 玩家名 -->
+                    <p class="authorname">
+                        <a class="zanauthor">
+                                <img src="img/ding.png" alt="">
+                        </a>
+                        <a class="playername" href="#">--parado</a>
+                    </p>
+                </div>
+                <!-- 第二个 -->
+                <div class="one">
+                        <!-- 游戏名和图片 -->
+                        <div class="gamenameandpic">
+                            <img src="img/food.png" alt="">
+                            <div>
+                                <a href="#">食物语(测试服)</a>
+                                <ul>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                </ul>
+                            
+                            </div>
+                        </div>
+                        <!-- 黑色分割线 -->
+                        <div class="line"></div>
+                        <!-- 评价 -->
+                        <div class="assess">
+                            <img class="leftimg" src="img/reference.png" alt="">
+                            <img class="rightimg" src="img/reference.png" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam repudiandae deleniti dicta repellendus quae, expedita ullam ducimus maxime alias architecto corrupti? Recusandae assumenda nulla maiores facilis! Quidem veniam laboriosam vel.</p>
+                           
+                        </div>
+                        <!-- 玩家名 -->
+                        <p class="authorname">
+                            <a class="zanauthor">
+                                    <img src="img/ding.png" alt="">
+                            </a>
+                            <a class="playername" href="#">--parado</a>
+                        </p>
+                    </div>
+                <!-- 第三个 -->
+                <div class="one">
+                        <!-- 游戏名和图片 -->
+                        <div class="gamenameandpic">
+                            <img src="img/food.png" alt="">
+                            <div>
+                                <a href="#">食物语(测试服)</a>
+                                <ul>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                </ul>
+                            
+                            </div>
+                        </div>
+                        <!-- 黑色分割线 -->
+                        <div class="line"></div>
+                        <!-- 评价 -->
+                        <div class="assess">
+                            <img class="leftimg" src="img/reference.png" alt="">
+                            <img class="rightimg" src="img/reference.png" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam repudiandae deleniti dicta repellendus quae, expedita ullam ducimus maxime alias architecto corrupti? Recusandae assumenda nulla maiores facilis! Quidem veniam laboriosam vel.</p>
+                           
+                        </div>
+                        <!-- 玩家名 -->
+                        <p class="authorname">
+                            <a class="zanauthor">
+                                    <img src="img/ding.png" alt="">
+                            </a>
+                            <a class="playername" href="#">--parado</a>
+                        </p>
+                    </div>
+                <!-- 第四个 -->
+                <div class="one">
+                        <!-- 游戏名和图片 -->
+                        <div class="gamenameandpic">
+                            <img src="img/food.png" alt="">
+                            <div>
+                                <a href="#">食物语(测试服)</a>
+                                <ul>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                </ul>
+                            
+                            </div>
+                        </div>
+                        <!-- 黑色分割线 -->
+                        <div class="line"></div>
+                        <!-- 评价 -->
+                        <div class="assess">
+                            <img class="leftimg" src="img/reference.png" alt="">
+                            <img class="rightimg" src="img/reference.png" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam repudiandae deleniti dicta repellendus quae, expedita ullam ducimus maxime alias architecto corrupti? Recusandae assumenda nulla maiores facilis! Quidem veniam laboriosam vel.</p>
+                           
+                        </div>
+                        <!-- 玩家名 -->
+                        <p class="authorname">
+                            <a class="zanauthor">
+                                    <img src="img/ding.png" alt="">
+                            </a>
+                            <a class="playername" href="#">--parado</a>
+                        </p>
+                    </div>
+        </div>
+        <!-- 第三列 -->
+        <div>   
+                <!-- 第一个 -->
+                <div class="one">
+                    <!-- 游戏名和图片 -->
+                    <div class="gamenameandpic">
+                        <img src="img/food.png" alt="">
+                        <div>
+                            <a href="#">食物语(测试服)</a>
+                            <ul>
+                                <li>
+                                    <img src="img/smallbluestar.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="img/smallbluestar.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="img/smallbluestar.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="img/smallbluestar.png" alt="">
+                                </li>
+                                <li>
+                                    <img src="img/smallbluestar.png" alt="">
+                                </li>
+                            </ul>
+                        
+                        </div>
+                    </div>
+                    <!-- 黑色分割线 -->
+                    <div class="line"></div>
+                    <!-- 评价 -->
+                    <div class="assess">
+                        <img class="leftimg" src="img/reference.png" alt="">
+                        <img class="rightimg" src="img/reference.png" alt="">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam repudiandae deleniti dicta repellendus quae, expedita ullam ducimus maxime alias architecto corrupti? Recusandae assumenda nulla maiores facilis! Quidem veniam laboriosam vel.</p>
+                       
+                    </div>
+                    <!-- 玩家名 -->
+                    <p class="authorname">
+                        <a class="zanauthor">
+                                <img src="img/ding.png" alt="">
+                        </a>
+                        <a class="playername" href="#">--parado</a>
+                    </p>
+                </div>
+                <!-- 第二个 -->
+                <div class="one">
+                        <!-- 游戏名和图片 -->
+                        <div class="gamenameandpic">
+                            <img src="img/food.png" alt="">
+                            <div>
+                                <a href="#">食物语(测试服)</a>
+                                <ul>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                </ul>
+                            
+                            </div>
+                        </div>
+                        <!-- 黑色分割线 -->
+                        <div class="line"></div>
+                        <!-- 评价 -->
+                        <div class="assess">
+                            <img class="leftimg" src="img/reference.png" alt="">
+                            <img class="rightimg" src="img/reference.png" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam repudiandae deleniti dicta repellendus quae, expedita ullam ducimus maxime alias architecto corrupti? Recusandae assumenda nulla maiores facilis! Quidem veniam laboriosam vel.</p>
+                           
+                        </div>
+                        <!-- 玩家名 -->
+                        <p class="authorname">
+                            <a class="zanauthor">
+                                    <img src="img/ding.png" alt="">
+                            </a>
+                            <a class="playername" href="#">--parado</a>
+                        </p>
+                    </div>
+                <!-- 第三个 -->
+                <div class="one">
+                        <!-- 游戏名和图片 -->
+                        <div class="gamenameandpic">
+                            <img src="img/food.png" alt="">
+                            <div>
+                                <a href="#">食物语(测试服)</a>
+                                <ul>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                </ul>
+                            
+                            </div>
+                        </div>
+                        <!-- 黑色分割线 -->
+                        <div class="line"></div>
+                        <!-- 评价 -->
+                        <div class="assess">
+                            <img class="leftimg" src="img/reference.png" alt="">
+                            <img class="rightimg" src="img/reference.png" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam repudiandae deleniti dicta repellendus quae, expedita ullam ducimus maxime alias architecto corrupti? Recusandae assumenda nulla maiores facilis! Quidem veniam laboriosam vel.</p>
+                           
+                        </div>
+                        <!-- 玩家名 -->
+                        <p class="authorname">
+                            <a class="zanauthor">
+                                    <img src="img/ding.png" alt="">
+                            </a>
+                            <a class="playername" href="#">--parado</a>
+                        </p>
+                    </div>
+                <!-- 第四个 -->
+                <div class="one">
+                        <!-- 游戏名和图片 -->
+                        <div class="gamenameandpic">
+                            <img src="img/food.png" alt="">
+                            <div>
+                                <a href="#">食物语(测试服)</a>
+                                <ul>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                    <li>
+                                        <img src="img/smallbluestar.png" alt="">
+                                    </li>
+                                </ul>
+                            
+                            </div>
+                        </div>
+                        <!-- 黑色分割线 -->
+                        <div class="line"></div>
+                        <!-- 评价 -->
+                        <div class="assess">
+                            <img class="leftimg" src="img/reference.png" alt="">
+                            <img class="rightimg" src="img/reference.png" alt="">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam repudiandae deleniti dicta repellendus quae, expedita ullam ducimus maxime alias architecto corrupti? Recusandae assumenda nulla maiores facilis! Quidem veniam laboriosam vel.</p>
+                           
+                        </div>
+                        <!-- 玩家名 -->
+                        <p class="authorname">
+                            <a class="zanauthor">
+                                    <img src="img/ding.png" alt="">
+                            </a>
+                            <a class="playername" href="#">--parado</a>
+                        </p>
+                    </div>
+        </div>
+    </div>
+    
 </div>
 </section>
 <footer></footer>
